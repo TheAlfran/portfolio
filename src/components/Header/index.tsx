@@ -20,7 +20,7 @@ export default function Header() {
             alignItems="center"
             justifyContent="space-evenly"
           >
-            <img src="/public/inverted-logo.png" width="62px" height="53px" />
+            <img src="/inverted-logo.png" width="62px" height="53px" />
             <Box display="flex" gap="40px" alignItems="center">
               <Typography color="white">about</Typography>
               <Typography color="white">portfolio</Typography>
