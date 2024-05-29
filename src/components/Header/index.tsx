@@ -4,7 +4,7 @@ import CallMadeIcon from "@mui/icons-material/CallMade";
 export default function Header() {
   return (
     <Grid container>
-      <Grid item md={12}>
+      <Grid item xs={12} md={12}>
         <Slide
           direction="down"
           in={true}
@@ -22,9 +22,9 @@ export default function Header() {
           >
             <img src="/public/inverted-logo.png" width="62px" height="53px" />
             <Box display="flex" gap="40px" alignItems="center">
-              <Typography color="white">About</Typography>
-              <Typography color="white">Portfolio</Typography>
-              <Typography color="white">Contact</Typography>
+              <Typography color="white">about</Typography>
+              <Typography color="white">portfolio</Typography>
+              <Typography color="white">contact</Typography>
               <Button
                 sx={{
                   border: 1,
