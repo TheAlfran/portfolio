@@ -13,9 +13,8 @@ export default function Header() {
           timeout={1000}
         >
           <Stack
-            bgcolor="black"
+            bgcolor="#333333"
             height="92px"
-            mb={2}
             direction="row"
             alignItems="center"
             justifyContent="space-evenly"

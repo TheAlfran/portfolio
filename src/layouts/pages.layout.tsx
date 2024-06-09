@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Container } from "@mui/material";
 import React from "react";
 
 interface PageLayoutProps {
@@ -6,5 +6,9 @@ interface PageLayoutProps {
 }
 
 export default function PageLayout({ children }: PageLayoutProps) {
-  return <Box sx={{ margin: "auto", maxWidth: "60%" }}>{children}</Box>;
+  return (
+    <Container sx={{ margin: "auto", maxWidth: "xl", padding: "8dvh" }}>
+      {children}
+    </Container>
+  );
 }
