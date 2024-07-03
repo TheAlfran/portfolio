@@ -1,4 +1,5 @@
 import { Box, Container, Grid, Slide, Stack } from "@mui/material";
+
 import { SocialIconsComponent } from "./components";
 
 export default function Header() {
