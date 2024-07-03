@@ -20,12 +20,17 @@ export const ProjectDisplayComponent: React.FC<
         padding: "12px",
       }}
     >
-      <Box width="100%" height="126px" bgcolor="#686D76" />
+      <Box width="100%" height="126px" bgcolor="#6295A2" />
       <Box width="100%" mt="10px">
-        <Typography fontSize="18px" textAlign="start">
+        <Typography
+          fontSize="18px"
+          fontWeight="bold"
+          textAlign="start"
+          color="#B3E2A7"
+        >
           {title}
         </Typography>
-        <Typography fontSize="10px" textAlign="start">
+        <Typography fontSize="10px" textAlign="start" color="#686D76">
           {subtitle}
         </Typography>
       </Box>

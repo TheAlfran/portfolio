@@ -1,5 +1,5 @@
-import { Box, Button, Grid, Slide, Stack, Typography } from "@mui/material";
-import CallMadeIcon from "@mui/icons-material/CallMade";
+import { Box, Container, Grid, Slide, Stack } from "@mui/material";
+import { SocialIconsComponent } from "./components";
 
 export default function Header() {
   return (
@@ -13,34 +13,26 @@ export default function Header() {
           timeout={1000}
         >
           <Stack
-            bgcolor="#333333"
-            height="92px"
+            bgcolor="#538392"
+            height={{ xs: "70px", md: "92px" }}
             direction="row"
             alignItems="center"
-            justifyContent="space-evenly"
+            justifyContent="space-between"
           >
-            <img src="/inverted-logo.png" width="62px" height="53px" />
-            <Box display="flex" gap="40px" alignItems="center">
-              <Typography color="white">about</Typography>
-              <Typography color="white">portfolio</Typography>
-              <Typography color="white">contact</Typography>
-              <Button
-                sx={{
-                  border: 1,
-                  borderColor: "white",
-                  borderRadius: "20px",
-                  gap: "10px",
-                  textTransform: "none",
-                  pl: "16px",
-                  pr: "16px",
-                }}
-              >
-                <Typography color="white" fontSize="16px" fontWeight="none">
-                  View Resume
-                </Typography>
-                <CallMadeIcon sx={{ color: "white", fontSize: "14px" }} />
-              </Button>
-            </Box>
+            <Container
+              sx={{
+                display: "flex",
+                justifyContent: "space-between",
+              }}
+            >
+              <img src="/inverted-logo.png" width={"62px"} height="53px" />
+              <Box display="flex" gap="30px" alignItems="center">
+                <SocialIconsComponent />
+                <SocialIconsComponent logo="/instagram.png" />
+                <SocialIconsComponent logo="/github.png" />
+                <SocialIconsComponent logo="/linkedin.png" />
+              </Box>
+            </Container>
           </Stack>
         </Slide>
       </Grid>
