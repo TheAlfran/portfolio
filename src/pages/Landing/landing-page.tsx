@@ -1,49 +1,86 @@
-import { Box, Grid, Stack, Typography } from "@mui/material";
+import { Box, Grid, Hidden, Stack, Typography } from "@mui/material";
 
 import {
-  AvatarComponent,
+  InfoCardComponent,
+  IntroductionCardComponent,
   ProjectDisplayComponent,
-  SocialLinksComponent,
+  TimeCardComponent,
 } from "./components";
 
 export default function LandingPage() {
   return (
     <Grid container>
-      <Grid item md={12}>
-        <Stack direction="row" gap="30px">
-          <Stack>
-            <AvatarComponent />
-          </Stack>
-          <Stack>
-            <Box display="flex">
-              <Typography textAlign="start" fontWeight="bold" fontSize="40px">
-                Hey, I'm Alfranciss. I'am a
-              </Typography>
-            </Box>
-            <Box>
-              <Typography textAlign="start" fontSize="40px">
-                front-end developer.
-              </Typography>
-            </Box>
-            <Box display="flex" gap="42px">
-              <SocialLinksComponent logo="/twitter.png" title="twitter" />
-              <SocialLinksComponent logo="/instagram.png" title="Instagram" />
-              <SocialLinksComponent logo="/github.png" title="Github" />
-              <SocialLinksComponent logo="/linkedin.png" title="LinkedIn" />
-            </Box>
-          </Stack>
+      <Grid item xs={12} md={12}>
+        <Stack
+          direction={{ xs: "column", md: "row" }}
+          alignItems={{ xs: "center", md: "start" }}
+          justifyContent="space-between"
+        >
+          <IntroductionCardComponent />
+          <Hidden xsDown mdDown>
+            <TimeCardComponent />
+          </Hidden>
         </Stack>
-        <Stack gap="35px" mt="400px">
+        <Stack
+          mt="51px"
+          display="flex"
+          justifyContent="space-between"
+          flexDirection={{ xs: "column", sm: "column", md: "row", lg: "row" }}
+          alignItems={{
+            xs: "center",
+            sm: "center",
+            md: "normal",
+            lg: "normal",
+          }}
+          gap={{ xs: "20px", sm: "20px", md: "20px", lg: "0px" }}
+        >
+          <InfoCardComponent />
+          <InfoCardComponent
+            title="Portfolio"
+            subtitle="Explore my works"
+            logo="/portfolio.png"
+            backgroundColor="#6295A2"
+          />
+          <InfoCardComponent
+            title="Experience"
+            subtitle="My journey so far"
+            logo="/experience.png"
+            backgroundColor="#80B9AD"
+          />
+          <InfoCardComponent
+            title="Contact"
+            subtitle="Let's Connect"
+            logo="/contact-us.png"
+            backgroundColor="#B3E2A7"
+          />
+        </Stack>
+        <Stack gap="35px" mt="120px">
           <Box
             display="flex"
             justifyContent="space-between"
             alignItems="center"
           >
-            <Box width="460px" height="1px" border={1} borderColor="black" />
-            <Typography fontSize="18px">Some of my Works</Typography>
-            <Box width="460px" height="1px" border={1} borderColor="black" />
+            <Box
+              width={{ xs: "0px", md: "0px", lg: "460px" }}
+              height="1px"
+              borderBottom={{ xs: 0, md: 0, lg: "1px solid black" }}
+              borderColor="#686D76"
+            />
+            <Typography fontSize={"18px"}>Some of my Works</Typography>
+            <Box
+              width={{ xs: "0px", md: "0px", lg: "460px" }}
+              height="1px"
+              borderBottom={{ xs: 0, md: 0, lg: "1px solid black" }}
+              borderColor="#686D76"
+            />
           </Box>
-          <Box display="flex" justifyContent="space-between">
+          <Box
+            display="flex"
+            flexDirection={{ xs: "column", md: "row" }}
+            justifyContent="space-between"
+            gap={{ xs: "20px", md: "40px" }}
+            alignItems={{ xs: "center", md: "start" }}
+          >
             <ProjectDisplayComponent
               title="Lorem Ipsum"
               subtitle="lorem ipsum"

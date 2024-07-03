@@ -12,9 +12,9 @@ export const SocialLinksComponent: React.FC<SocialLinksComponentProps> = ({
 }) => {
   return (
     <React.Fragment>
-      <Box display="flex" alignItems="center" gap="11px">
-        <img src={logo} width="24px" height="24px" />
-        <Typography fontSize="24px">{title}</Typography>
+      <Box display="flex" alignItems="center" gap={{ xs: "5px", md: "11px" }}>
+        <Box component="img" src={logo} width="24px" height="24px" />
+        <Typography fontSize={{ xs: "12px", md: "24px" }}>{title}</Typography>
       </Box>
     </React.Fragment>
   );
