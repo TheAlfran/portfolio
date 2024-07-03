@@ -9,9 +9,7 @@ export const SocialIconsComponent: React.FC<SocialIconsComponentProps> = ({
 }) => {
   return (
     <React.Fragment>
-      <Box>
-        <img src={logo} width="35px" height="35px" />
-      </Box>
+      <Box component="img" src={logo} width="35px" height="35px" />
     </React.Fragment>
   );
 };

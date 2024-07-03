@@ -15,7 +15,7 @@ export const InfoCardComponent: React.FC<InfoCardProps> = ({
 }) => {
   return (
     <Paper
-    elevation={3}
+      elevation={3}
       sx={{
         width: "265px",
         height: "200px",
@@ -35,7 +35,7 @@ export const InfoCardComponent: React.FC<InfoCardProps> = ({
           alignItems="center"
           zIndex="1"
         >
-          <img src={logo} width="38px" height="38px" />
+          <Box component="img" src={logo} width="38px" height="38px" />
         </Box>
       </Stack>
       <Stack mt="17px" ml="20px">

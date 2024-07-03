@@ -25,7 +25,12 @@ export default function Header() {
                 justifyContent: "space-between",
               }}
             >
-              <img src="/inverted-logo.png" width={"62px"} height="53px" />
+              <Box
+                component="img"
+                src="/inverted-logo.png"
+                width="62px"
+                height="53px"
+              />
               <Box display="flex" gap="30px" alignItems="center">
                 <SocialIconsComponent />
                 <SocialIconsComponent logo="/instagram.png" />
