@@ -1,6 +1,10 @@
 import { createRouter, RouterProvider } from "@tanstack/react-router";
 import "./App.scss";
 import { routeTree } from "./routeTree.gen";
+import { ThemeProvider } from "@mui/material";
+
+import { useCreateTheme } from "./@core";
+import Header from "./components/Header";
 
 const router = createRouter({ routeTree });
 
@@ -11,7 +15,13 @@ declare module "@tanstack/react-router" {
 }
 
 function App() {
-  return <RouterProvider router={router} />;
+  const theme = useCreateTheme();
+  return (
+    <ThemeProvider theme={theme}>
+      <Header />
+      <RouterProvider router={router} />
+    </ThemeProvider>
+  );
 }
 
 export default App;
