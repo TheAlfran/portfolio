@@ -1,4 +1,4 @@
-import { Box, Grid, Hidden, Stack, Typography } from "@mui/material";
+import { Box, Grid, Hidden, Stack, Typography, useTheme } from "@mui/material";
 
 import {
   InfoCardComponent,
@@ -8,6 +8,7 @@ import {
 } from "./components";
 
 export default function LandingPage() {
+  const theme = useTheme();
   return (
     <Grid container>
       <Grid item xs={12} md={12}>
@@ -39,19 +40,19 @@ export default function LandingPage() {
             title="Portfolio"
             subtitle="Explore my works"
             logo="/portfolio.png"
-            backgroundColor="#6295A2"
+            backgroundColor={theme.palette.secondary.main}
           />
           <InfoCardComponent
             title="Experience"
             subtitle="My journey so far"
             logo="/experience.png"
-            backgroundColor="#80B9AD"
+            backgroundColor={theme.palette.tertiary.main}
           />
           <InfoCardComponent
             title="Contact"
             subtitle="Let's Connect"
             logo="/contact-us.png"
-            backgroundColor="#B3E2A7"
+            backgroundColor={theme.palette.text.primary}
           />
         </Stack>
         <Stack gap="35px" mt="120px">

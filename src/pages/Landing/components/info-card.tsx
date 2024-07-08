@@ -1,4 +1,4 @@
-import { Box, Paper, Stack, Typography } from "@mui/material";
+import { Box, Paper, Stack, Typography, useTheme } from "@mui/material";
 
 interface InfoCardProps {
   title?: string;
@@ -11,8 +11,11 @@ export const InfoCardComponent: React.FC<InfoCardProps> = ({
   title = "About Me",
   subtitle = "Know who am I",
   logo = "/profile-user.png",
-  backgroundColor = "#538392",
+  backgroundColor,
 }) => {
+  const theme = useTheme();
+  const defaultBackgroundColor = theme.palette.primary.main;
+
   return (
     <Paper
       elevation={3}
@@ -21,12 +24,13 @@ export const InfoCardComponent: React.FC<InfoCardProps> = ({
         height: "200px",
         borderBottom: "3px solid black",
         borderRadius: "5px",
-        borderColor: "#538392",
+        borderColor: theme.palette.primary.main,
+        bgcolor: theme.palette.background.default,
       }}
     >
       <Stack mt="20px" ml="20px">
         <Box
-          bgcolor={backgroundColor}
+          bgcolor={backgroundColor || defaultBackgroundColor}
           width="50px"
           height="50px"
           borderRadius="99px"
@@ -39,10 +43,14 @@ export const InfoCardComponent: React.FC<InfoCardProps> = ({
         </Box>
       </Stack>
       <Stack mt="17px" ml="20px">
-        <Typography color="#B3E2A7" fontWeight="bold" fontSize="25px">
+        <Typography
+          color={theme.palette.text.primary}
+          fontWeight="bold"
+          fontSize="25px"
+        >
           {title}
         </Typography>
-        <Typography color="#686D76" fontSize="14px">
+        <Typography color={theme.palette.text.secondary} fontSize="14px">
           {subtitle}
         </Typography>
       </Stack>
@@ -50,7 +58,7 @@ export const InfoCardComponent: React.FC<InfoCardProps> = ({
         width="100%"
         height="1px"
         borderBottom="1px solid black"
-        borderColor="#E6E6E6"
+        borderColor={theme.palette.default.main}
         position="relative"
         bottom="100px"
       />

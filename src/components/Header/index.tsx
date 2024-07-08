@@ -1,8 +1,9 @@
-import { Box, Container, Grid, Slide, Stack } from "@mui/material";
+import { Box, Container, Grid, Slide, Stack, useTheme } from "@mui/material";
 
 import { SocialIconsComponent } from "./components";
 
 export default function Header() {
+  const theme = useTheme();
   return (
     <Grid container>
       <Grid item xs={12} md={12}>
@@ -14,7 +15,7 @@ export default function Header() {
           timeout={1000}
         >
           <Stack
-            bgcolor="#538392"
+            bgcolor={theme.palette.primary.main}
             height={{ xs: "70px", md: "92px" }}
             direction="row"
             alignItems="center"

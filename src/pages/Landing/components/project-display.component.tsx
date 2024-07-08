@@ -1,4 +1,4 @@
-import { Paper, Typography, Box } from "@mui/material";
+import { Paper, Typography, Box, useTheme } from "@mui/material";
 
 interface ProjectDisplayComponentProps {
   title?: string;
@@ -8,9 +8,10 @@ interface ProjectDisplayComponentProps {
 export const ProjectDisplayComponent: React.FC<
   ProjectDisplayComponentProps
 > = ({ title = "Lorem Ipsum", subtitle = "Lorem Ipsum" }) => {
+  const theme = useTheme();
   return (
     <Paper
-      elevation={1}
+      elevation={4}
       sx={{
         width: "265px",
         height: "200px",
@@ -18,19 +19,20 @@ export const ProjectDisplayComponent: React.FC<
         display: "flex",
         flexDirection: "column",
         padding: "12px",
+        bgcolor: theme.palette.background.default,
       }}
     >
-      <Box width="100%" height="126px" bgcolor="#6295A2" />
+      <Box width="100%" height="126px" bgcolor={theme.palette.secondary.main} />
       <Box width="100%" mt="10px">
         <Typography
           fontSize="18px"
           fontWeight="bold"
           textAlign="start"
-          color="#B3E2A7"
+          color={theme.palette.text.primary}
         >
           {title}
         </Typography>
-        <Typography fontSize="10px" textAlign="start" color="#686D76">
+        <Typography fontSize="10px" textAlign="start" color={theme.palette.text.secondary}>
           {subtitle}
         </Typography>
       </Box>

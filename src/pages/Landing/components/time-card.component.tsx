@@ -1,6 +1,7 @@
-import { Box, Paper, Stack, Typography } from "@mui/material";
+import { Box, Paper, Stack, Typography, useTheme } from "@mui/material";
 
 export const TimeCardComponent = () => {
+  const theme = useTheme();
   return (
     <Paper
       elevation={5}
@@ -10,6 +11,7 @@ export const TimeCardComponent = () => {
         height: { xs: "100px", md: "130px", lg: "150px" },
         justifyContent: "space-around",
         alignItems: "center",
+        bgcolor: theme.palette.background.default
       }}
     >
       <Stack
@@ -22,7 +24,7 @@ export const TimeCardComponent = () => {
           fontSize="32px"
           fontWeight="bold"
           lineHeight={1}
-          color="#B3E2A7"
+          color={theme.palette.text.primary}
         >
           12:41 AM
         </Typography>
@@ -31,7 +33,7 @@ export const TimeCardComponent = () => {
         </Typography>
       </Stack>
       <Stack height="100%">
-        <Box width="7px" height="90%" bgcolor="#538392" />
+        <Box width="7px" height="90%" bgcolor={theme.palette.primary.main} />
       </Stack>
     </Paper>
   );

@@ -1,7 +1,9 @@
-import { Box, Button, Paper, Stack, Typography } from "@mui/material";
+import { Box, Button, Paper, Stack, Typography, useTheme } from "@mui/material";
 import CallMadeIcon from "@mui/icons-material/CallMade";
 
 export const IntroductionCardComponent = () => {
+
+  const theme = useTheme();
   return (
     <Paper
       elevation={5}
@@ -11,19 +13,20 @@ export const IntroductionCardComponent = () => {
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
+        backgroundColor: theme.palette.background.default,
       }}
     >
-      <Stack marginLeft={{ xs: "23px", lg: "46px" }}>
+      <Stack marginLeft={{ xs: "23px", lg: "46px", }}>
         <Typography
           fontSize={{ xs: "12px", sm: "16px", md: "18px", lg: "24px" }}
           fontWeight="bold"
-          color="#686D76"
+          color={theme.palette.text.secondary}
         >
           Hello, I'm Alfranciss Dionsay
         </Typography>
         <Typography
           fontSize={{ xs: "10px", sm: "11px", md: "13px", lg: "18px" }}
-          color="#686D76"
+          color={theme.palette.text.secondary}
         >
           I'am a junior front-end developer
         </Typography>
@@ -34,13 +37,13 @@ export const IntroductionCardComponent = () => {
             borderRadius: "20px",
             display: "flex",
             justifyContent: "space-around",
-            background: "linear-gradient(to left, #B3E2A7 0%, #538392 100%)",
+            background: `linear-gradient(to left, ${theme.palette.text.primary} 0%, ${theme.palette.primary.main} 100%)`,
             marginTop: "5px",
           }}
         >
           <Typography
             fontSize={{ xs: "9px", sm: "11px", md: "12px", lg: "16px" }}
-            color="white"
+            color={theme.palette.background.default}
             textTransform="initial"
           >
             View Resume
