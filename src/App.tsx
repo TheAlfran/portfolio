@@ -1,10 +1,10 @@
 import { createRouter, RouterProvider } from "@tanstack/react-router";
-import "./App.scss";
-import { routeTree } from "./routeTree.gen";
 import { ThemeProvider } from "@mui/material";
 
 import { useCreateTheme } from "./@core";
 import Header from "./components/Header";
+import "./App.scss";
+import { routeTree } from "./routeTree.gen";
 
 const router = createRouter({ routeTree });
 
