@@ -58,7 +58,7 @@ export const InfoCardComponent: React.FC<InfoCardProps> = ({
         width="100%"
         height="1px"
         borderBottom="1px solid black"
-        borderColor="#E6E6E6"
+        borderColor={theme.palette.default.main}
         position="relative"
         bottom="100px"
       />
