@@ -19,7 +19,7 @@ export const ProjectDisplayComponent: React.FC<
         display: "flex",
         flexDirection: "column",
         padding: "12px",
-        bgcolor: theme.palette.default.main,
+        bgcolor: theme.palette.background.default,
       }}
     >
       <Box width="100%" height="126px" bgcolor={theme.palette.secondary.main} />

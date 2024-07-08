@@ -24,7 +24,7 @@ export const lightThemePalette: CustomPaletteOptions = {
     secondary: "#686D76",
   },
   default: {
-    main: "#FFFFFF",
+    main: "#E6E6E6",
   },
   background: {
     default: "#FFFFFF",

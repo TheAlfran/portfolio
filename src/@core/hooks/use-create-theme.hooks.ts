@@ -8,7 +8,7 @@ export const useCreateTheme = () => {
   const COLOR_MODE = "dark" as ColorModes;
 
   const paletteOptions =
-    COLOR_MODE === "light" ? lightThemePalette : darkThemePalette;
+    COLOR_MODE === "dark" ? lightThemePalette : darkThemePalette;
 
   const theme = useMemo(
     () =>

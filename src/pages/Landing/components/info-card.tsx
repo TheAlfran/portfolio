@@ -25,7 +25,7 @@ export const InfoCardComponent: React.FC<InfoCardProps> = ({
         borderBottom: "3px solid black",
         borderRadius: "5px",
         borderColor: theme.palette.primary.main,
-        bgcolor: theme.palette.default.main,
+        bgcolor: theme.palette.background.default,
       }}
     >
       <Stack mt="20px" ml="20px">

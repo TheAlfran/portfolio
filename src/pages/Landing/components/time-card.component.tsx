@@ -11,7 +11,7 @@ export const TimeCardComponent = () => {
         height: { xs: "100px", md: "130px", lg: "150px" },
         justifyContent: "space-around",
         alignItems: "center",
-        bgcolor: theme.palette.default.main
+        bgcolor: theme.palette.background.default
       }}
     >
       <Stack

@@ -13,7 +13,7 @@ export const IntroductionCardComponent = () => {
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
-        backgroundColor: theme.palette.default.main,
+        backgroundColor: theme.palette.background.default,
       }}
     >
       <Stack marginLeft={{ xs: "23px", lg: "46px", }}>
@@ -43,7 +43,7 @@ export const IntroductionCardComponent = () => {
         >
           <Typography
             fontSize={{ xs: "9px", sm: "11px", md: "12px", lg: "16px" }}
-            color={theme.palette.default.main}
+            color={theme.palette.background.default}
             textTransform="initial"
           >
             View Resume
