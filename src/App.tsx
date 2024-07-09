@@ -2,9 +2,10 @@ import { createRouter, RouterProvider } from "@tanstack/react-router";
 import { ThemeProvider } from "@mui/material";
 
 import { useCreateTheme } from "./@core";
-import Header from "./components/Header";
+
 import "./App.scss";
 import { routeTree } from "./routeTree.gen";
+import { Footer, Header} from "./components";
 
 const router = createRouter({ routeTree });
 
@@ -20,6 +21,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <Header />
       <RouterProvider router={router} />
+      <Footer />
     </ThemeProvider>
   );
 }

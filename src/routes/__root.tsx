@@ -6,5 +6,5 @@ export const Route = createRootRoute({
     <PageLayout>
       <Outlet />
     </PageLayout>
-  ),    
+  ),
 });

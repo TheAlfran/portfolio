@@ -2,7 +2,7 @@ import { Box, Container, Grid, Slide, Stack, useTheme } from "@mui/material";
 
 import { SocialIconsComponent } from "./components";
 
-export default function Header() {
+export const Header = () => {
   const theme = useTheme();
   return (
     <Grid container>
