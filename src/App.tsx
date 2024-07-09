@@ -4,7 +4,7 @@ import { ThemeProvider } from "@mui/material";
 import { useCreateTheme } from "./@core";
 import "./App.scss";
 import { routeTree } from "./routeTree.gen";
-import { Footer, Header} from "./components";
+import { Footer, Header } from "./components";
 
 const router = createRouter({ routeTree });
 
