@@ -48,12 +48,12 @@ export const Footer = () => {
                 onClick={handleScrollUp}
               >
                 <Box
-                  component={"img"}
+                  component="img"
                   src="/chevron-up.png"
                   width="30px"
                   height="30px"
                   position="relative"
-                  bottom={"10px"}
+                  bottom="10px"
                 />
               </Button>
             </Stack>
