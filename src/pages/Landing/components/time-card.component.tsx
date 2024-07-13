@@ -1,7 +1,15 @@
 import { Box, Paper, Stack, Typography, useTheme } from "@mui/material";
+import Clock from "react-live-clock";
 
 export const TimeCardComponent = () => {
   const theme = useTheme();
+  const currentDate = new Date();
+  const formattedDate = currentDate.toLocaleDateString("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  });
+
   return (
     <Paper
       elevation={5}
@@ -11,25 +19,29 @@ export const TimeCardComponent = () => {
         height: { xs: "100px", md: "130px", lg: "150px" },
         justifyContent: "space-around",
         alignItems: "center",
-        bgcolor: theme.palette.background.default
+        bgcolor: theme.palette.background.default,
       }}
     >
       <Stack
         sx={{
           display: "flex",
           justifyContent: "center",
+          alignItems: "flex-start",
         }}
       >
+        <Clock
+          format={"HH:mm:ss"}
+          ticking={true}
+          timezone={"Asia/Manila"}
+          style={{ fontSize: "32px", fontWeight: "bold", lineHeight: 1 }}
+        />
         <Typography
           fontSize="32px"
           fontWeight="bold"
           lineHeight={1}
-          color={theme.palette.text.primary}
+          color={theme.palette.text.secondary}
         >
-          12:41 AM
-        </Typography>
-        <Typography fontSize="32px" fontWeight="bold" lineHeight={1}>
-          June 19, 2024
+          {formattedDate}
         </Typography>
       </Stack>
       <Stack height="100%">
