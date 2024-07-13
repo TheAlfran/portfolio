@@ -1,4 +1,4 @@
-import { Box, Paper, Stack, Typography, useTheme } from "@mui/material";
+import { Box, Button, Stack, Typography, useTheme } from "@mui/material";
 
 interface InfoCardProps {
   title?: string;
@@ -17,8 +17,8 @@ export const InfoCardComponent: React.FC<InfoCardProps> = ({
   const defaultBackgroundColor = theme.palette.primary.main;
 
   return (
-    <Paper
-      elevation={3}
+    <Button
+      variant="contained"
       sx={{
         width: "265px",
         height: "200px",
@@ -26,9 +26,27 @@ export const InfoCardComponent: React.FC<InfoCardProps> = ({
         borderRadius: "5px",
         borderColor: theme.palette.primary.main,
         bgcolor: theme.palette.background.default,
+        transition: "transform 0.2s ease-in-out",
+        "&:hover": {
+          transform: "scale(1.10)",
+          bgcolor: theme.palette.background.default,
+        },
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "flex-start",
+        textAlign: "left",
+        padding: 0,
       }}
     >
-      <Stack mt="20px" ml="20px">
+      <Box
+        width="100%"
+        height="1px"
+        border="1px"
+        position="relative"
+        top="5px"
+        bgcolor={theme.palette.default.main}
+      />
+      <Stack ml="20px" mt="-20px">
         <Box
           bgcolor={backgroundColor || defaultBackgroundColor}
           width="50px"
@@ -42,7 +60,7 @@ export const InfoCardComponent: React.FC<InfoCardProps> = ({
           <Box component="img" src={logo} width="38px" height="38px" />
         </Box>
       </Stack>
-      <Stack mt="17px" ml="20px">
+      <Stack mt="17px" ml="15px">
         <Typography
           color={theme.palette.text.primary}
           fontWeight="bold"
@@ -54,14 +72,6 @@ export const InfoCardComponent: React.FC<InfoCardProps> = ({
           {subtitle}
         </Typography>
       </Stack>
-      <Box
-        width="100%"
-        height="1px"
-        borderBottom="1px solid black"
-        borderColor={theme.palette.default.main}
-        position="relative"
-        bottom="100px"
-      />
-    </Paper>
+    </Button>
   );
 };
