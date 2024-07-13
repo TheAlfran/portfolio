@@ -30,7 +30,7 @@ export const TimeCardComponent = () => {
         }}
       >
         <Clock
-          format={"HH:mm:ss"}
+          format={"h:mm:ss A"}
           ticking={true}
           timezone={"Asia/Manila"}
           style={{ fontSize: "32px", fontWeight: "bold", lineHeight: 1 }}
