@@ -1,10 +1,11 @@
+import React from "react";
 import { Box, Grid, Stack, Typography, useTheme } from "@mui/material";
 import { PictureComponent } from "../components";
 
 export const FirstScene = () => {
   const theme = useTheme();
   return (
-    <>
+    <React.Fragment>
       <Grid item md={8}>
         <Typography>About Screen</Typography>
       </Grid>
@@ -40,7 +41,14 @@ export const FirstScene = () => {
           backgroundColor: theme.palette.default.main,
         }}
       />
-      <Stack display="flex" flexDirection="row" alignItems="center" justifyContent="space-between" width="100%" mt="20px">
+      <Stack
+        display="flex"
+        flexDirection="row"
+        alignItems="center"
+        justifyContent="space-between"
+        width="100%"
+        mt="20px"
+      >
         <PictureComponent />
         <PictureComponent />
         <PictureComponent />
@@ -48,6 +56,6 @@ export const FirstScene = () => {
         <PictureComponent />
         <PictureComponent />
       </Stack>
-    </>
+    </React.Fragment>
   );
 };
