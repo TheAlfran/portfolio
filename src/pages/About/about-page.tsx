@@ -1,12 +1,12 @@
 import { Grid } from "@mui/material";
-import { FirstScene } from "./scenes";
-import { SecondScene } from "./scenes/second-scene";
+import { FirstScene, SecondScene, ThirdScene } from "./scenes";
 
 export const AboutScreen = () => {
   return (
     <Grid container>
       <FirstScene />
       <SecondScene />
+      <ThirdScene />
     </Grid>
   );
 };

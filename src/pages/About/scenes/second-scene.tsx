@@ -8,12 +8,13 @@ export const SecondScene = () => {
 
   return (
     <Grid
-      container
-      spacing={3}
+      item
       display="flex"
       flexDirection={{ xs: "column", md: "row" }}
       justifyContent="space-between"
+      alignItems="center"
       mt="100px"
+      md={12}
     >
       <Stack
         display="flex"
@@ -29,7 +30,7 @@ export const SecondScene = () => {
       <Stack>
         <Box
           sx={{
-            width: "500px",
+            width: "450px",
             height: "400px",
             display: "flex",
             alignItems: "center",
@@ -65,6 +66,7 @@ export const SecondScene = () => {
         justifyContent="space-between"
         alignItems="flex-end"
         width="300px"
+        height="100%"
       >
         <Box>
           <Typography sx={titleTextStyle}>Coder</Typography>
