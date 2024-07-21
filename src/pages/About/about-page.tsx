@@ -1,5 +1,5 @@
 import { Grid } from "@mui/material";
-import { FirstScene, SecondScene, ThirdScene } from "./scenes";
+import { FirstScene, FourthScene, SecondScene, ThirdScene } from "./scenes";
 
 export const AboutScreen = () => {
   return (
@@ -7,6 +7,7 @@ export const AboutScreen = () => {
       <FirstScene />
       <SecondScene />
       <ThirdScene />
+      <FourthScene />
     </Grid>
   );
 };

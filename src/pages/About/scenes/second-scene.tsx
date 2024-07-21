@@ -13,7 +13,7 @@ export const SecondScene = () => {
       flexDirection={{ xs: "column", md: "row" }}
       justifyContent="space-between"
       alignItems="center"
-      mt="100px"
+      mt="150px"
       md={12}
     >
       <Stack
