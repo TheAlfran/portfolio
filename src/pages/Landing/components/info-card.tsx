@@ -1,10 +1,12 @@
 import { Box, Button, Stack, Typography, useTheme } from "@mui/material";
+import { useNavigate } from "@tanstack/react-router";
 
 interface InfoCardProps {
   title?: string;
   subtitle?: string;
   logo?: string;
   backgroundColor?: string;
+  onClick?: () => void;
 }
 
 export const InfoCardComponent: React.FC<InfoCardProps> = ({
@@ -15,7 +17,11 @@ export const InfoCardComponent: React.FC<InfoCardProps> = ({
 }) => {
   const theme = useTheme();
   const defaultBackgroundColor = theme.palette.primary.main;
+  const navigate = useNavigate();
 
+  const handleClick = () => {
+    navigate({ to: "/about" });
+  };
   return (
     <Button
       variant="contained"
@@ -37,6 +43,7 @@ export const InfoCardComponent: React.FC<InfoCardProps> = ({
         textAlign: "left",
         padding: 0,
       }}
+      onClick={handleClick}
     >
       <Box
         width="100%"
