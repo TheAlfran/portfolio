@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Grid, Stack, Typography, useTheme } from "@mui/material";
+
 import { PictureComponent } from "../components";
 
 export const FirstScene = () => {

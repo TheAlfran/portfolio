@@ -1,5 +1,6 @@
 import { Grid } from "@mui/material";
 import Chart from "react-apexcharts";
+
 import { chartSeries, useChartOptions } from "../hooks";
 
 export const FourthScene = () => {
