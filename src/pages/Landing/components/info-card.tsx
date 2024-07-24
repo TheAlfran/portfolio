@@ -6,6 +6,7 @@ interface InfoCardProps {
   subtitle?: string;
   logo?: string;
   backgroundColor?: string;
+  route?: string;
   onClick?: () => void;
 }
 
@@ -13,6 +14,7 @@ export const InfoCardComponent: React.FC<InfoCardProps> = ({
   title = "About Me",
   subtitle = "Know who am I",
   logo = "/profile-user.png",
+  route = "/about",
   backgroundColor,
 }) => {
   const theme = useTheme();
@@ -20,7 +22,7 @@ export const InfoCardComponent: React.FC<InfoCardProps> = ({
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate({ to: "/about" });
+    navigate({ to: route });
   };
   return (
     <Button
