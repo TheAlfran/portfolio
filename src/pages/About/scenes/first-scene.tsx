@@ -8,7 +8,13 @@ export const FirstScene = () => {
   return (
     <React.Fragment>
       <Grid item md={8}>
-        <Typography>About Screen</Typography>
+        <Box
+          component="img"
+          src="/about-image.jpg"
+          width="342px"
+          height="342px"
+          ml="150px"
+        />
       </Grid>
       <Grid item md={4}>
         <Typography
