@@ -53,6 +53,7 @@ export default function LandingPage() {
             subtitle="Let's Connect"
             logo="/contact-us.png"
             backgroundColor={theme.palette.text.primary}
+            route="/contact"
           />
         </Stack>
         <Stack gap="35px" mt="120px">
