@@ -9,25 +9,25 @@ export const ContactSectionScene = () => {
       <Stack display="flex" direction="row" justifyContent="space-between">
         <Stack>
           <Typography
-            fontSize={"64px"}
-            fontWeight={"bold"}
+            fontSize="64px"
+            fontWeight="bold"
             sx={{ textDecoration: "underline" }}
             color={theme.palette.text.secondary}
           >
             contact.
           </Typography>
-          <Typography fontSize={"24px"} color={theme.palette.text.primary}>
+          <Typography fontSize="24px" color={theme.palette.text.primary}>
             get in touch with me via
           </Typography>
-          <Typography fontSize={"24px"} color={theme.palette.text.primary}>
+          <Typography fontSize="24px" color={theme.palette.text.primary}>
             social media
           </Typography>
-          <Stack gap={"34px"} mt={"28px"}>
-            <Stack display={"flex"} direction={"row"} gap={"115px"}>
+          <Stack gap="34px" mt="28px">
+            <Stack display="flex" direction="row" gap="115px">
               <SocialLinksComponents />
               <SocialLinksComponents src="/instagram.png" text="Instagram" />
             </Stack>
-            <Stack display={"flex"} direction={"row"} gap={"115px"}>
+            <Stack display="flex" direction="row" gap="115px">
               <SocialLinksComponents src="/facebook.png" text="Facebook" />
               <SocialLinksComponents src="/linkedin.png" text="Linkedin" />
             </Stack>

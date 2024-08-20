@@ -10,7 +10,7 @@ import {
 export const GetInTouchScene = () => {
   const theme = useTheme();
   return (
-    <Grid item md={12} mt={"100px"}>
+    <Grid item md={12} mt="100px">
       <Typography
         fontSize="24px"
         fontWeight="bold"
