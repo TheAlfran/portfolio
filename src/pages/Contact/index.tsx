@@ -1,7 +1,6 @@
 import { Grid } from "@mui/material";
 
-import { ContactSectionScene } from "./scenes";
-import { GetInTouchScene } from "./scenes/get-in-touch-scene";
+import { ContactSectionScene, GetInTouchScene } from "./scenes";
 
 export const ContactScreen = () => {
   return (
