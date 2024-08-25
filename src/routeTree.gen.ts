@@ -11,11 +11,17 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
+import { Route as PortfolioImport } from './routes/portfolio'
 import { Route as ContactImport } from './routes/contact'
 import { Route as AboutImport } from './routes/about'
 import { Route as IndexImport } from './routes/index'
 
 // Create/Update Routes
+
+const PortfolioRoute = PortfolioImport.update({
+  path: '/portfolio',
+  getParentRoute: () => rootRoute,
+} as any)
 
 const ContactRoute = ContactImport.update({
   path: '/contact',
@@ -57,6 +63,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactImport
       parentRoute: typeof rootRoute
     }
+    '/portfolio': {
+      id: '/portfolio'
+      path: '/portfolio'
+      fullPath: '/portfolio'
+      preLoaderRoute: typeof PortfolioImport
+      parentRoute: typeof rootRoute
+    }
   }
 }
 
@@ -66,6 +79,7 @@ export const routeTree = rootRoute.addChildren({
   IndexRoute,
   AboutRoute,
   ContactRoute,
+  PortfolioRoute,
 })
 
 /* prettier-ignore-end */
@@ -79,7 +93,8 @@ export const routeTree = rootRoute.addChildren({
       "children": [
         "/",
         "/about",
-        "/contact"
+        "/contact",
+        "/portfolio"
       ]
     },
     "/": {
@@ -90,6 +105,9 @@ export const routeTree = rootRoute.addChildren({
     },
     "/contact": {
       "filePath": "contact.tsx"
+    },
+    "/portfolio": {
+      "filePath": "portfolio.tsx"
     }
   }
 }
