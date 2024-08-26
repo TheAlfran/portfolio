@@ -27,7 +27,7 @@ export const OverViewScene = () => {
         route="/portfolio"
       />
       <InfoCardComponent
-        title="Experience"
+        title="Blog"
         subtitle="My journey so far"
         logo="/experience.png"
         backgroundColor={theme.palette.tertiary.main}
