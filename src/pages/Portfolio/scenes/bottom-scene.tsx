@@ -1,4 +1,5 @@
 import { Grid, Stack } from "@mui/material";
+
 import { PortfolioCardComponent } from "../components";
 
 export const BottomScene = () => {
