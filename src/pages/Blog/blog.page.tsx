@@ -1,15 +1,14 @@
 import { Grid } from "@mui/material";
 
-import { TopScene } from "./scenes/top-scene";
+import { LatestBlogScene, BlogsScene } from "./scenes";
 import { SeparatorComponent } from "src/components/Separator/separator-component";
-import { BottomScene } from "./scenes/bottom-scene";
 
-export const PortfolioPage = () => {
+export const BlogPage = () => {
   return (
     <Grid container>
-      <TopScene />
+      <LatestBlogScene />
       <SeparatorComponent />
-      <BottomScene />
+      <BlogsScene />
     </Grid>
   );
 };

@@ -1,2 +1,2 @@
-export * from "./contact-sections-scene";
-export * from "./get-in-touch-scene";
+export * from "./contact-sections.scene";
+export * from "./get-in-touch.scene";
