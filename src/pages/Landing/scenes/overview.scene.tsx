@@ -31,6 +31,7 @@ export const OverViewScene = () => {
         subtitle="My journey so far"
         logo="/experience.png"
         backgroundColor={theme.palette.tertiary.main}
+        route="/blog"
       />
       <InfoCardComponent
         title="Contact"

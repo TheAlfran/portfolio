@@ -13,6 +13,7 @@
 import { Route as rootRoute } from './routes/__root'
 import { Route as PortfolioImport } from './routes/portfolio'
 import { Route as ContactImport } from './routes/contact'
+import { Route as BlogImport } from './routes/blog'
 import { Route as AboutImport } from './routes/about'
 import { Route as IndexImport } from './routes/index'
 
@@ -25,6 +26,11 @@ const PortfolioRoute = PortfolioImport.update({
 
 const ContactRoute = ContactImport.update({
   path: '/contact',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const BlogRoute = BlogImport.update({
+  path: '/blog',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -56,6 +62,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutImport
       parentRoute: typeof rootRoute
     }
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogImport
+      parentRoute: typeof rootRoute
+    }
     '/contact': {
       id: '/contact'
       path: '/contact'
@@ -78,6 +91,7 @@ declare module '@tanstack/react-router' {
 export const routeTree = rootRoute.addChildren({
   IndexRoute,
   AboutRoute,
+  BlogRoute,
   ContactRoute,
   PortfolioRoute,
 })
@@ -93,6 +107,7 @@ export const routeTree = rootRoute.addChildren({
       "children": [
         "/",
         "/about",
+        "/blog",
         "/contact",
         "/portfolio"
       ]
@@ -102,6 +117,9 @@ export const routeTree = rootRoute.addChildren({
     },
     "/about": {
       "filePath": "about.tsx"
+    },
+    "/blog": {
+      "filePath": "blog.tsx"
     },
     "/contact": {
       "filePath": "contact.tsx"
