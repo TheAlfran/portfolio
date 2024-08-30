@@ -1,7 +1,7 @@
 import { Grid } from "@mui/material";
 
 import { ContactSectionScene, GetInTouchScene } from "./scenes";
-import { SeparatorComponent } from "src/components/Separator/separator-component";
+import { SeparatorComponent } from "src/components/Separator";
 
 export const ContactScreen = () => {
   return (
