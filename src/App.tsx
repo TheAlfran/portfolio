@@ -4,7 +4,6 @@ import { ThemeProvider } from "@mui/material";
 import { useCreateTheme } from "./@core";
 import "./App.scss";
 import { routeTree } from "./routeTree.gen";
-import { Footer, Header } from "./components";
 
 const router = createRouter({ routeTree });
 
@@ -18,9 +17,7 @@ function App() {
   const theme = useCreateTheme();
   return (
     <ThemeProvider theme={theme}>
-      <Header />
       <RouterProvider router={router} />
-      <Footer />
     </ThemeProvider>
   );
 }

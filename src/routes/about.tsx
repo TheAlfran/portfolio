@@ -1,7 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Suspense } from "react";
 
-import { AboutScreen } from "src/pages/About";
+import { AboutPage } from "@core/constants";
+import { LoadingComponent } from "src/components";
+
 
 export const Route = createFileRoute("/about")({
-  component: () => <AboutScreen />,
+  component: () => (
+    <Suspense fallback={<LoadingComponent />}>
+      <AboutPage />
+    </Suspense>
+  ),
 });

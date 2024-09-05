@@ -7,9 +7,9 @@ import {
   SecondScene,
   ThirdScene,
 } from "./scenes";
-import { SeparatorComponent } from "src/components/Separator";
+import { SeparatorComponent } from "src/components";
 
-export const AboutScreen = () => {
+export default function AboutScreen() {
   return (
     <Grid container>
       <FirstScene />
@@ -23,4 +23,4 @@ export const AboutScreen = () => {
       <FifthScene />
     </Grid>
   );
-};
+}
