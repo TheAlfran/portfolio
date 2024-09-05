@@ -7,7 +7,7 @@ import {
   SecondScene,
   ThirdScene,
 } from "./scenes";
-import { SeparatorComponent } from "src/components/Separator";
+import { SeparatorComponent } from "src/components";
 
 export default function AboutScreen() {
   return (
