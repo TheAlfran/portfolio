@@ -3,8 +3,7 @@ import { Grid } from "@mui/material";
 import { LatestBlogScene, BlogsScene } from "./scenes";
 import { SeparatorComponent } from "src/components/Separator";
 
-
-export const BlogPage = () => {
+export default function BlogPage() {
   return (
     <Grid container>
       <LatestBlogScene />
@@ -12,4 +11,4 @@ export const BlogPage = () => {
       <BlogsScene />
     </Grid>
   );
-};
+}

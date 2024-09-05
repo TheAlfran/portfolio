@@ -9,7 +9,7 @@ import {
 } from "./scenes";
 import { SeparatorComponent } from "src/components/Separator";
 
-export const AboutScreen = () => {
+export default function AboutScreen() {
   return (
     <Grid container>
       <FirstScene />
@@ -23,4 +23,4 @@ export const AboutScreen = () => {
       <FifthScene />
     </Grid>
   );
-};
+}
