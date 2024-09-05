@@ -1,1 +1,1 @@
-export * from "./route.constants";
+export * from "./route.constant";
