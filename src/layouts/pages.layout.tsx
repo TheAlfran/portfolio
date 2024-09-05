@@ -1,5 +1,6 @@
 import { Box, Container } from "@mui/material";
 import React from "react";
+
 import { Header, Footer } from "src/components";
 
 interface PageLayoutProps {
