@@ -20,7 +20,7 @@ export const ContactSectionScene = () => {
             get in touch with me via
           </Typography>
           <Typography fontSize="24px" color={theme.palette.text.primary}>
-            social media
+            social medias
           </Typography>
           <Stack gap="34px" mt="28px">
             <Stack display="flex" direction="row" gap="115px">
