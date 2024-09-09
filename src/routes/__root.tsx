@@ -1,6 +1,6 @@
 import { Outlet, createRootRoute } from "@tanstack/react-router";
-import { NotFoundComponent } from "src/components";
 
+import { NotFoundComponent } from "src/components";
 import PageLayout from "src/layouts/pages.layout";
 
 export const Route = createRootRoute({
