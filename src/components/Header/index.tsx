@@ -1,9 +1,23 @@
-import { Box, Container, Grid, Slide, Stack, useTheme } from "@mui/material";
+import {
+  Box,
+  Button,
+  Container,
+  Grid,
+  Slide,
+  Stack,
+  useTheme,
+} from "@mui/material";
 
 import { SocialIconsComponent } from "./components";
+import { useNavigate } from "@tanstack/react-router";
 
 export const Header = () => {
   const theme = useTheme();
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate({ to: "/" });
+  };
   return (
     <Grid container>
       <Grid item xs={12} md={12}>
@@ -27,12 +41,14 @@ export const Header = () => {
                 justifyContent: "space-between",
               }}
             >
-              <Box
-                component="img"
-                src="/inverted-logo.png"
-                width="62px"
-                height="53px"
-              />
+              <Button onClick={handleClick}>
+                <Box
+                  component="img"
+                  src="/inverted-logo.png"
+                  width="62px"
+                  height="53px"
+                />
+              </Button>
               <Box display="flex" gap="30px" alignItems="center">
                 <SocialIconsComponent />
                 <SocialIconsComponent logo="/instagram.png" />
@@ -45,4 +61,4 @@ export const Header = () => {
       </Grid>
     </Grid>
   );
-}
+};

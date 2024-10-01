@@ -1,4 +1,12 @@
-import { Grid, Stack, Typography, useTheme, Box } from "@mui/material";
+import {
+  Grid,
+  Stack,
+  Typography,
+  useTheme,
+  Box,
+  Skeleton,
+} from "@mui/material";
+import { useState } from "react";
 
 export const ThirdScene = () => {
   const theme = useTheme();
@@ -6,14 +14,35 @@ export const ThirdScene = () => {
     fontSize: "12px",
     color: theme.palette.text.secondary,
   };
+  const [isLoading, setIsLoading] = useState(true);
   return (
-    <Grid item md={12} display="flex" flexDirection="row" alignItems="center" justifyContent="center" gap="88px" mt="100px">
+    <Grid
+      item
+      md={12}
+      display="flex"
+      flexDirection="row"
+      alignItems="center"
+      justifyContent="center"
+      gap="88px"
+      mt="100px"
+    >
       <Stack>
+        {isLoading && (
+          <Skeleton
+            variant="rectangular"
+            width={"429px"}
+            height={"474px"}
+            sx={{ borderRadius: "5px" }}
+          />
+        )}
         <Box
           component="img"
           src="/random-fact.png"
           width="429px"
           height="474px"
+          sx={{ display: isLoading ? "none" : "block", borderRadius: "5px" }}
+          onLoad={() => setIsLoading(false)}
+          onError={() => setIsLoading(false)}
         />
       </Stack>
       <Stack>
