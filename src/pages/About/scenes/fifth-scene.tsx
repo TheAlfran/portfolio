@@ -71,6 +71,7 @@ export const FifthScene = () => {
               src="/desktop.jpeg"
               width="467px"
               height="278px"
+              draggable="false"
             />
           </Paper>
           <Paper
@@ -120,6 +121,7 @@ export const FifthScene = () => {
                 width="97%"
                 height="97%"
                 borderRadius="999px"
+                draggable="false"
               />
             </Box>
           </Paper>

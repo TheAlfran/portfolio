@@ -19,7 +19,7 @@ export const useChartOptions = (): ApexOptions => {
       },
     },
     xaxis: {
-      categories: ["Gamer", "Coding", "Drawing", "Designer"],
+      categories: ["Gaming", "Coding", "Drawing", "Designing"],
     },
     yaxis: {
       min: 0,
