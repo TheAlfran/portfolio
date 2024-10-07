@@ -1,5 +1,5 @@
 import { Box, Paper, Skeleton, useTheme } from "@mui/material";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 interface PictureProps {
   source?: string;
@@ -19,20 +19,20 @@ export const PictureComponent: React.FC<PictureProps> = ({
   }, [source]);
 
   return (
-    <>
+    <Box>
       {isLoading ? (
         <Skeleton
           variant="rectangular"
-          width={"169px"} 
-          height={"126px"}
+          width={"150px"}
+          height={"100px"}
           sx={{ borderRadius: "5px" }}
         />
       ) : (
         <Paper
           elevation={4}
           sx={{
-            width: "169px",
-            height: "126px",
+            width: "150px",
+            height: "100px",
             padding: "6px",
             bgcolor: theme.palette.background.default,
             display: "flex",
@@ -47,9 +47,11 @@ export const PictureComponent: React.FC<PictureProps> = ({
             width="100%"
             height="100%"
             borderColor="transparent"
+            draggable="false"
+            borderRadius="inherit"
           />
         </Paper>
       )}
-    </>
+    </Box>
   );
 };

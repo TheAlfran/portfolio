@@ -1,7 +1,7 @@
 import Lottie from "lottie-react";
 import { Box } from "@mui/material";
 
-import loadingAnimation from "../../../public/loading.json";
+import loadingAnimation from "../../assets/loading.json";
 
 export const LoadingComponent = () => {
   return (
@@ -18,5 +18,3 @@ export const LoadingComponent = () => {
     </Box>
   );
 };
-
-

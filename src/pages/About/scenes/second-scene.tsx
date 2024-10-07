@@ -70,11 +70,11 @@ export const SecondScene = () => {
       >
         <Box>
           <Typography sx={titleTextStyle}>Coder</Typography>
-          <Typography sx={subTextStyle}>React / React Native</Typography>
-          <Typography sx={subTextStyle}>Typescript</Typography>
-          <Typography sx={subTextStyle}>HTML / CSS</Typography>
-          <Typography sx={subTextStyle}>Grumbling at my screen</Typography>
-          <Typography sx={subTextStyle}>Drinking Milk</Typography>
+          <Typography sx={subTextStyle}>react / react native</Typography>
+          <Typography sx={subTextStyle}>typescript</Typography>
+          <Typography sx={subTextStyle}>html / css</Typography>
+          <Typography sx={subTextStyle}>grumbling at my screen</Typography>
+          <Typography sx={subTextStyle}>drinking milk</Typography>
         </Box>
         <Box>
           <Typography sx={titleTextStyle}>Gamer</Typography>
