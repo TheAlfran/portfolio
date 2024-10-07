@@ -2,8 +2,8 @@ import { Box, Button, Paper, Stack, Typography, useTheme } from "@mui/material";
 import CallMadeIcon from "@mui/icons-material/CallMade";
 
 export const IntroductionCardComponent = () => {
-
   const theme = useTheme();
+
   return (
     <Paper
       elevation={5}
@@ -16,7 +16,7 @@ export const IntroductionCardComponent = () => {
         backgroundColor: theme.palette.background.default,
       }}
     >
-      <Stack marginLeft={{ xs: "23px", lg: "46px", }}>
+      <Stack marginLeft={{ xs: "23px", lg: "46px" }}>
         <Typography
           fontSize={{ xs: "12px", sm: "16px", md: "18px", lg: "24px" }}
           fontWeight="bold"
@@ -31,6 +31,9 @@ export const IntroductionCardComponent = () => {
           I'am a junior front-end developer
         </Typography>
         <Button
+          component="a"
+          href="/resume.pdf"
+          download="Alfranciss_Dionsay_Resume.pdf"
           sx={{
             width: { xs: "90px", sm: "100px", md: "120px", lg: "155px" },
             height: { xs: "19px", sm: "21px", md: "24px", lg: "28px" },
