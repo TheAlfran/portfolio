@@ -1,23 +1,24 @@
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Stack, Typography, useTheme } from "@mui/material";
 
 import { ProjectDisplayComponent } from "../components";
 
 export const FeatureScene = () => {
+  const theme = useTheme();
   return (
     <Stack gap="35px" mt="120px">
       <Box display="flex" justifyContent="space-between" alignItems="center">
         <Box
           width={{ xs: "0px", md: "0px", lg: "460px" }}
           height="1px"
-          borderBottom={{ xs: 0, md: 0, lg: "1px solid black" }}
-          borderColor="#686D76"
+          bgcolor={theme.palette.default.main}
         />
-        <Typography fontSize={"18px"}>Some of my Works</Typography>
+        <Typography fontSize={"18px"} color={theme.palette.text.secondary}>
+          Some of my Works
+        </Typography>
         <Box
           width={{ xs: "0px", md: "0px", lg: "460px" }}
           height="1px"
-          borderBottom={{ xs: 0, md: 0, lg: "1px solid black" }}
-          borderColor="#686D76"
+          bgcolor={theme.palette.default.main}
         />
       </Box>
       <Box
