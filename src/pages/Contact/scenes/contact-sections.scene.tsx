@@ -24,12 +24,24 @@ export const ContactSectionScene = () => {
           </Typography>
           <Stack gap="34px" mt="28px">
             <Stack display="flex" direction="row" gap="115px">
-              <SocialLinksComponents />
-              <SocialLinksComponents src="/instagram.png" text="Instagram" />
+              <SocialLinksComponents link="https://x.com/TheAlfran" />
+              <SocialLinksComponents
+                src="/instagram.png"
+                text="Instagram"
+                link="https://www.instagram.com/thealfran/"
+              />
             </Stack>
             <Stack display="flex" direction="row" gap="115px">
-              <SocialLinksComponents src="/facebook.png" text="Facebook" />
-              <SocialLinksComponents src="/linkedin.png" text="Linkedin" />
+              <SocialLinksComponents
+                src="/facebook.png"
+                text="Facebook"
+                link="https://www.facebook.com/The.alfran/"
+              />
+              <SocialLinksComponents
+                src="/linkedin.png"
+                text="Linkedin"
+                link="https://www.linkedin.com/in/alfranciss-dionsay-150567257/"
+              />
             </Stack>
           </Stack>
         </Stack>
