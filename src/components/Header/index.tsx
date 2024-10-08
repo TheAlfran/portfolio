@@ -50,10 +50,19 @@ export const Header = () => {
                 />
               </Button>
               <Box display="flex" gap="30px" alignItems="center">
-                <SocialIconsComponent />
-                <SocialIconsComponent logo="/instagram.png" />
-                <SocialIconsComponent logo="/github.png" />
-                <SocialIconsComponent logo="/linkedin.png" />
+                <SocialIconsComponent link="https://x.com/TheAlfran" />
+                <SocialIconsComponent
+                  logo="/instagram.png"
+                  link="https://www.instagram.com/thealfran/"
+                />
+                <SocialIconsComponent
+                  logo="/github.png"
+                  link="https://github.com/TheAlfran"
+                />
+                <SocialIconsComponent
+                  logo="/linkedin.png"
+                  link="https://www.linkedin.com/in/alfranciss-dionsay-150567257/"
+                />
               </Box>
             </Container>
           </Stack>
