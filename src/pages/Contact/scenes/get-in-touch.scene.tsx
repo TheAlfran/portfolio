@@ -3,6 +3,7 @@ import {
   Grid,
   Stack,
   TextField,
+  Tooltip,
   Typography,
   useTheme,
 } from "@mui/material";
@@ -79,19 +80,21 @@ export const GetInTouchScene = () => {
               width: "550px",
             }}
           />
-          <Button
-            sx={{
-              backgroundColor: theme.palette.primary.main,
-              mt: "18px",
-              width: "265px",
-              height: "45px",
-              textTransform: "initial",
-            }}
-          >
-            <Typography color={theme.palette.text.primary}>
-              Send Message
-            </Typography>
-          </Button>
+          <Tooltip title="In Progress" placement="top">
+            <Button
+              sx={{
+                backgroundColor: theme.palette.primary.main,
+                mt: "18px",
+                width: "265px",
+                height: "45px",
+                textTransform: "initial",
+              }}
+            >
+              <Typography color={theme.palette.text.primary}>
+                Send Message
+              </Typography>
+            </Button>
+          </Tooltip>
         </Stack>
         <Stack>
           <Typography
@@ -109,7 +112,11 @@ export const GetInTouchScene = () => {
           >
             and email
           </Typography>
-          <Typography fontSize="16px" color={theme.palette.text.secondary} mt="26px">
+          <Typography
+            fontSize="16px"
+            color={theme.palette.text.secondary}
+            mt="26px"
+          >
             +63 967 967 0612
           </Typography>
           <Typography fontSize="16px" color={theme.palette.text.secondary}>
