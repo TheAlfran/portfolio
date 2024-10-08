@@ -27,9 +27,22 @@ export const FeatureScene = () => {
         gap={{ xs: "20px", md: "40px" }}
         alignItems={{ xs: "center", md: "start" }}
       >
-        <ProjectDisplayComponent title="Lorem Ipsum" subtitle="lorem ipsum" />
-        <ProjectDisplayComponent title="Lorem Ipsum" subtitle="lorem ipsum" />
-        <ProjectDisplayComponent title="Lorem Ipsum" subtitle="lorem ipsum" />
+        <ProjectDisplayComponent
+          title="Game Hive"
+          subtitle="a hackathon project"
+          img="/gamehive.png"
+        />
+        <ProjectDisplayComponent
+          title="My Website"
+          subtitle="my very own website"
+          img="/website.png"
+        />
+        <ProjectDisplayComponent
+          title="Fruit Panda"
+          subtitle="a online store for fruits"
+          img="/fruitpanda.png"
+          objectFit="contain"
+        />
       </Box>
     </Stack>
   );
