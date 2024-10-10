@@ -13,7 +13,12 @@ export const SocialIconsComponent: React.FC<SocialIconsComponentProps> = ({
   return (
     <React.Fragment>
       <Box component="a" href={link} target="_blank" rel="noopener noreferrer">
-        <Box component="img" src={logo} width="35px" height="35px" />
+        <Box
+          component="img"
+          src={logo}
+          width={{ xs: "15px", md: "25px" }}
+          height={{ xs: "15px", md: "25px" }}
+        />
       </Box>
     </React.Fragment>
   );

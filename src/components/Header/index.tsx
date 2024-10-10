@@ -5,19 +5,24 @@ import {
   Grid,
   Slide,
   Stack,
+  Typography,
   useTheme,
 } from "@mui/material";
-
-import { SocialIconsComponent } from "./components";
 import { useNavigate } from "@tanstack/react-router";
 
 export const Header = () => {
   const theme = useTheme();
+
   const navigate = useNavigate();
 
   const handleClick = () => {
     navigate({ to: "/" });
   };
+
+  const handleNavigation = (route: string) => {
+    navigate({ to: route });
+  };
+
   return (
     <Grid container>
       <Grid item xs={12} md={12}>
@@ -29,11 +34,9 @@ export const Header = () => {
           timeout={1000}
         >
           <Stack
-            bgcolor={theme.palette.primary.main}
             height={{ xs: "70px", md: "92px" }}
-            direction="row"
-            alignItems="center"
-            justifyContent="space-between"
+            display="flex"
+            justifyContent="center"
           >
             <Container
               sx={{
@@ -41,28 +44,71 @@ export const Header = () => {
                 justifyContent: "space-between",
               }}
             >
-              <Button onClick={handleClick}>
+              <Button
+                onClick={handleClick}
+                sx={{
+                  gap: "10px",
+                  "&:hover": {
+                    backgroundColor: "transparent",
+                  },
+                }}
+                disableRipple
+              >
                 <Box
                   component="img"
-                  src="/inverted-logo.png"
-                  width="62px"
-                  height="53px"
+                  src="/profile.jpeg"
+                  width="40px"
+                  height="40px"
+                  borderRadius="50px"
+                />
+                <Typography textTransform="initial">Alfranciss</Typography>
+                <Box
+                  component="img"
+                  src="/verified.png"
+                  width="20px"
+                  height="20px"
                 />
               </Button>
-              <Box display="flex" gap="30px" alignItems="center">
-                <SocialIconsComponent link="https://x.com/TheAlfran" />
-                <SocialIconsComponent
-                  logo="/instagram.png"
-                  link="https://www.instagram.com/thealfran/"
-                />
-                <SocialIconsComponent
-                  logo="/github.png"
-                  link="https://github.com/TheAlfran"
-                />
-                <SocialIconsComponent
-                  logo="/linkedin.png"
-                  link="https://www.linkedin.com/in/alfranciss-dionsay-150567257/"
-                />
+              <Box
+                display="flex"
+                gap={{ xs: "10px", sm: "15px", md: "30px" }}
+                alignItems="center"
+              >
+                {[
+                  { label: "about", route: "/about" },
+                  { label: "portfolio", route: "/portfolio" },
+                  { label: "blog", route: "/blog" },
+                  { label: "contact", route: "/contact" },
+                ].map((item, index) => (
+                  <Box
+                    key={index}
+                    sx={{
+                      cursor: "pointer",
+                      "&:hover": { textDecoration: "underline" },
+                    }}
+                    onClick={() => handleNavigation(item.route)}
+                  >
+                    <Typography
+                      fontSize={{ xs: "10px", sm: "12px", md: "14px" }}
+                      color={theme.palette.text.secondary}
+                    >
+                      {item.label}
+                    </Typography>
+                  </Box>
+                ))}
+                <Button
+                  disableRipple
+                  sx={{
+                    "&:hover": { backgroundColor: "transparent" },
+                  }}
+                >
+                  <Box
+                    component="img"
+                    src="/paintbrush.svg"
+                    width="20px"
+                    height="20px"
+                  />
+                </Button>
               </Box>
             </Container>
           </Stack>
