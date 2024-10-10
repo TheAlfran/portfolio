@@ -7,22 +7,18 @@ import {
   Typography,
   useTheme,
 } from "@mui/material";
-import { useNavigate } from "@tanstack/react-router";
+
+import { SocialIconsComponent } from "./components";
 
 export const Footer = () => {
   const theme = useTheme();
-  const navigate = useNavigate();
-
-  const handleNavigation = (route: string) => {
-    navigate({ to: route });
-  };
 
   return (
     <Grid container>
       <Grid item xs={12} md={12}>
         <Stack
           bgcolor={theme.palette.default.main}
-          height={70}
+          height={{ xs: 50, sm: 60, md: 70 }}
           display="flex"
           justifyContent="center"
         >
@@ -30,46 +26,58 @@ export const Footer = () => {
             sx={{
               display: "flex",
               justifyContent: "space-between",
+              alignItems: "center",
             }}
           >
             <Box>
-              <Typography fontSize="14px" color={theme.palette.text.secondary}>
+              <Typography
+                fontSize={{ xs: "10px", sm: "12px", md: "14px" }}
+                color={theme.palette.text.secondary}
+              >
                 @2024 Alfranciss Dionsay
               </Typography>
             </Box>
-            <Box display="flex" gap="30px">
-              {[
-                { label: "about", route: "/about" },
-                { label: "portfolio", route: "/portfolio" },
-                { label: "blog", route: "/blog" },
-                { label: "contact", route: "/contact" },
-              ].map((item, index) => (
-                <Box
-                  key={index}
-                  sx={{
-                    cursor: "pointer",
-                    "&:hover": { textDecoration: "underline" },
-                  }}
-                  onClick={() => handleNavigation(item.route)}
-                >
-                  <Typography
-                    fontSize="14px"
-                    color={theme.palette.text.secondary}
-                  >
-                    {item.label}
-                  </Typography>
-                </Box>
-              ))}
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "space-between",
+              }}
+            >
+              <Box
+                display="flex"
+                gap={{ xs: "20px", sm: "25px", md: "30px" }}
+                alignItems="center"
+              >
+                <SocialIconsComponent link="https://x.com/TheAlfran" />
+                <SocialIconsComponent
+                  logo="/instagram.png"
+                  link="https://www.instagram.com/thealfran/"
+                />
+                <SocialIconsComponent
+                  logo="/github.png"
+                  link="https://github.com/TheAlfran"
+                />
+                <SocialIconsComponent
+                  logo="/linkedin.png"
+                  link="https://www.linkedin.com/in/alfranciss-dionsay-150567257/"
+                />
+              </Box>
             </Box>
           </Container>
           <Container sx={{ display: "flex", justifyContent: "center" }}>
-            <Stack position="relative" bottom={85} alignItems="center">
+            <Stack
+              position="relative"
+              bottom={{ xs: 65, sm: 75, md: 85 }}
+              alignItems="center"
+            >
               <Button
                 sx={{
-                  borderRadius: "50px",
                   backgroundColor: `${theme.palette.default.main}`,
-                  height: "80px",
-                  width: "80px",
+                  borderRadius: "50%",
+                  height: { xs: "50px", sm: "60px", md: "80px" },
+                  width: { xs: "50px", sm: "60px", md: "80px" },
+                  minWidth: "0px",
+                  padding: "0px",
                   position: "absolute",
                   display: "flex",
                   justifyContent: "center",
@@ -84,10 +92,10 @@ export const Footer = () => {
                 <Box
                   component="img"
                   src="/chevron-up.png"
-                  width="30px"
-                  height="30px"
+                  width={{ xs: "20px", sm: "25px", md: "30px" }}
+                  height={{ xs: "20px", sm: "25px", md: "30px" }}
                   position="relative"
-                  bottom="10px"
+                  bottom={{ xs: "5px", sm: "7px", md: "10px" }}
                 />
               </Button>
             </Stack>
