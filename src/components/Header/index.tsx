@@ -3,24 +3,20 @@ import {
   Button,
   Container,
   Grid,
+  Hidden,
   Slide,
   Stack,
   Typography,
-  useTheme,
 } from "@mui/material";
 import { useNavigate } from "@tanstack/react-router";
 
-export const Header = () => {
-  const theme = useTheme();
+import { MenuDropdown, PagesButtonComponent } from "./components";
 
+export const Header = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {
     navigate({ to: "/" });
-  };
-
-  const handleNavigation = (route: string) => {
-    navigate({ to: route });
   };
 
   return (
@@ -71,31 +67,18 @@ export const Header = () => {
               </Button>
               <Box
                 display="flex"
-                gap={{ xs: "10px", sm: "15px", md: "30px" }}
                 alignItems="center"
+                gap={{ xs: "5px", sm: "15px", md: "20px" }}
               >
-                {[
-                  { label: "about", route: "/about" },
-                  { label: "portfolio", route: "/portfolio" },
-                  { label: "blog", route: "/blog" },
-                  { label: "contact", route: "/contact" },
-                ].map((item, index) => (
-                  <Box
-                    key={index}
-                    sx={{
-                      cursor: "pointer",
-                      "&:hover": { textDecoration: "underline" },
-                    }}
-                    onClick={() => handleNavigation(item.route)}
-                  >
-                    <Typography
-                      fontSize={{ xs: "10px", sm: "12px", md: "14px" }}
-                      color={theme.palette.text.secondary}
-                    >
-                      {item.label}
-                    </Typography>
-                  </Box>
-                ))}
+                <Hidden mdDown>
+                  <PagesButtonComponent page="about" />
+                  <PagesButtonComponent page="portfolio" />
+                  <PagesButtonComponent page="blog" />
+                  <PagesButtonComponent page="contact" />
+                </Hidden>
+                <Hidden mdUp>
+                  <MenuDropdown />
+                </Hidden>
                 <Button
                   disableRipple
                   sx={{
