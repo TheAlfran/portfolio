@@ -20,7 +20,7 @@ export const MenuDropdown: React.FC = () => {
   };
 
   return (
-    <>
+    <React.Fragment>
       <IconButton onClick={handleClick}>
         <Box
           component="img"
@@ -105,6 +105,6 @@ export const MenuDropdown: React.FC = () => {
           Contact
         </MenuItem>
       </Menu>
-    </>
+    </React.Fragment>
   );
 };
