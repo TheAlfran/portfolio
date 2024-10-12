@@ -32,7 +32,7 @@ export const Header = () => {
           <Stack
             height={{ xs: "70px", md: "92px" }}
             display="flex"
-            justifyContent="center"
+            justifyContent="flex-end"
           >
             <Container
               sx={{
