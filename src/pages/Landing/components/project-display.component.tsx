@@ -1,91 +1,101 @@
-import { Paper, Typography, Box, useTheme, Grow, Tooltip } from "@mui/material";
 import React from "react";
+import { Box, Stack, Tooltip, Typography, useTheme } from "@mui/material";
 
 interface ProjectDisplayComponentProps {
+  src?: string;
   title?: string;
   subtitle?: string;
-  img?: string;
-  objectFit?: string;
 }
 
 export const ProjectDisplayComponent: React.FC<
   ProjectDisplayComponentProps
 > = ({
+  src = "/feature-1.png",
   title = "Lorem Ipsum",
-  subtitle = "Lorem Ipsum",
-  img = "/about-image.jpg",
-  objectFit = "fill",
+  subtitle = "Lorem Ipsum Dolor",
 }) => {
   const theme = useTheme();
-  const [hover, setHover] = React.useState(false);
 
   return (
-    <Tooltip title="In Progress" disableInteractive placement="top">
-      <Paper
-        elevation={hover ? 6 : 3}
-        sx={{
-          width: "265px",
-          height: "200px",
-          alignItems: "center",
-          display: "flex",
-          flexDirection: "column",
-          padding: "12px",
-          bgcolor: theme.palette.background.default,
-          transition: "elevation 0.3s ease",
-          "&:hover": {
-            ".grow-image": {
-              transform: "scaleX(1)",
+    <Stack gap="10px">
+      <Tooltip title="In Progress" disableInteractive placement="top">
+        <Box
+          position="relative"
+          width="250px"
+          height="310px"
+          borderRadius="10px"
+          overflow="hidden"
+          sx={{
+            "&:hover": { transform: "scale(1.05)", cursor: "not-allowed" },
+            transition: "transform 0.3s ease",
+            "&:hover::after": { opacity: 1 },
+            "::after": {
+              content: '""',
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              backgroundColor: "rgba(0, 0, 0, 0.9)",
+              opacity: 0,
+              transition: "opacity 0.3s ease",
             },
-          },
-        }}
-        onMouseEnter={() => setHover(true)}
-        onMouseLeave={() => setHover(false)}
-      >
-        <Box
-          width="100%"
-          height="126px"
-          component="img"
-          src={img}
-          bgcolor={theme.palette.secondary.main}
-          sx={{ objectFit: objectFit }}
-        />
-        <Box
-          width="100%"
-          mt="10px"
-          display="flex"
-          alignItems="center"
-          justifyContent="space-between"
+            "&:hover .hover-text": { opacity: 1 },
+          }}
         >
-          <Box>
+          <Box
+            component="img"
+            src={src}
+            alt={title}
+            width="100%"
+            height="100%"
+            sx={{ objectFit: "cover", borderRadius: "10px" }}
+          />
+          <Box
+            className="hover-text"
+            sx={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              opacity: 0,
+              transition: "opacity 0.3s ease",
+              zIndex: 1,
+            }}
+          >
             <Typography
-              fontSize="18px"
               fontWeight="bold"
-              textAlign="start"
-              color={theme.palette.text.primary}
+              fontSize="20px"
+              color="#fff"
+              sx={{
+                position: "absolute",
+                top: "10px",
+                left: "50%",
+                transform: "translateX(-50%)",
+                whiteSpace: "nowrap",
+              }}
             >
               {title}
             </Typography>
             <Typography
-              fontSize="10px"
-              textAlign="start"
-              color={theme.palette.text.secondary}
+              fontSize="20px"
+              color={theme.palette.text.primary}
+              sx={{
+                position: "absolute",
+                top: "50%",
+                left: "50%",
+                transform: "translate(-50%, -50%)",
+                textAlign: "center",
+                width: "100%",
+                padding: "0 20px",
+              }}
             >
               {subtitle}
             </Typography>
           </Box>
-          <Box display="flex" alignItems="center">
-            <Grow in={hover} timeout={500}>
-              <Box
-                component="img"
-                src="/next.png"
-                width="30px"
-                height="30px"
-                className="grow-image"
-              />
-            </Grow>
-          </Box>
         </Box>
-      </Paper>
-    </Tooltip>
+      </Tooltip>
+    </Stack>
   );
 };
