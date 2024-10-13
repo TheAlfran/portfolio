@@ -64,7 +64,7 @@ export const FeatureScene = () => {
           <Button
             sx={{
               width: "100px",
-              "&:hover": { backgroundColor: "transparent" },
+              "&:hover": { backgroundColor: "transparent", cursor: "not-allowed" },
             }}
             disableRipple
           >

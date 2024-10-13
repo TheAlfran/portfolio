@@ -1,8 +1,10 @@
 import { Box, Stack, Typography, useTheme } from "@mui/material";
 
+import { TextButtonComponent } from "../components";
 
 export const HeroScene = () => {
   const theme = useTheme();
+
   return (
     <Stack
       direction={{ xs: "column", md: "row" }}
@@ -38,7 +40,9 @@ export const HeroScene = () => {
         >
           I'm a junior frontend developer passionate about building
           user-friendly websites
-          <br /> and sharing my knowledge on my blog.
+          <br />
+          and sharing my knowledge on my <TextButtonComponent text="blog" /> and{" "}
+          <TextButtonComponent text="portfolio" />.
         </Typography>
       </Box>
     </Stack>
