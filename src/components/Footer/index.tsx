@@ -1,3 +1,4 @@
+import ExpandLessRoundedIcon from "@mui/icons-material/ExpandLessRounded";
 import {
   Box,
   Button,
@@ -7,7 +8,6 @@ import {
   Typography,
   useTheme,
 } from "@mui/material";
-
 import { SocialIconsComponent } from "./components";
 
 export const Footer = () => {
@@ -89,13 +89,13 @@ export const Footer = () => {
                 disableRipple
                 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               >
-                <Box
-                  component="img"
-                  src="/chevron-up.png"
-                  width={{ xs: "20px", sm: "25px", md: "30px" }}
-                  height={{ xs: "20px", sm: "25px", md: "30px" }}
-                  position="relative"
-                  bottom={{ xs: "5px", sm: "7px", md: "10px" }}
+                <ExpandLessRoundedIcon
+                  sx={{
+                    fontSize: { xs: "20px", sm: "25px", md: "30px" },
+                    position: "relative",
+                    bottom: { xs: "5px", sm: "7px", md: "10px" },
+                    color: theme.palette.text.secondary,
+                  }}
                 />
               </Button>
             </Stack>
