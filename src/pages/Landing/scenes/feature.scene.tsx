@@ -39,22 +39,22 @@ export const FeatureScene = () => {
         mt="40px"
       >
         <ProjectDisplayComponent
-          src="/feature-1.png"
+          src="/feature-1.webp"
           title="My Website"
           subtitle="A personal portfolio built with React  and TypeScript, showcasing my projects and skills."
         />
         <ProjectDisplayComponent
-          src="/feature-2.png"
+          src="/feature-2.webp"
           title="Barbeque App"
           subtitle="A family business app developed with React Native and Expo for seamless BBQ ordering."
         />
         <ProjectDisplayComponent
-          src="/feature-3.png"
+          src="/feature-3.webp"
           title="Game Hive"
           subtitle="A hackathon project created using React and Vite to engage the gaming community."
         />
         <ProjectDisplayComponent
-          src="/feature-4.png"
+          src="/feature-4.webp"
           title="Fruit Panda"
           subtitle="A mobile app from my learning days, built during my mobile development journey."
         />

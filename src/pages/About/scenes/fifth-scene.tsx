@@ -68,7 +68,7 @@ export const FifthScene = () => {
           >
             <Box
               component="img"
-              src="/desktop.jpeg"
+              src="/desktop.webp"
               width="467px"
               height="278px"
               draggable="false"

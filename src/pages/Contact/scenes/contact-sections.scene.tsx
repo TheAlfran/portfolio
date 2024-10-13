@@ -26,7 +26,7 @@ export const ContactSectionScene = () => {
             <Stack display="flex" direction="row" gap="115px">
               <SocialLinksComponents link="https://x.com/TheAlfran" />
               <SocialLinksComponents
-                src="/instagram.png"
+                src="/instagram.webp"
                 text="Instagram"
                 link="https://www.instagram.com/thealfran/"
               />
@@ -38,7 +38,7 @@ export const ContactSectionScene = () => {
                 link="https://www.facebook.com/The.alfran/"
               />
               <SocialLinksComponents
-                src="/linkedin.png"
+                src="/linkedin.webp"
                 text="Linkedin"
                 link="https://www.linkedin.com/in/alfranciss-dionsay-150567257/"
               />
@@ -48,7 +48,7 @@ export const ContactSectionScene = () => {
         <Stack>
           <Box
             component="img"
-            src="/contact-image.jpg"
+            src="/contact-image.webp"
             width="491px"
             height="475px"
           />

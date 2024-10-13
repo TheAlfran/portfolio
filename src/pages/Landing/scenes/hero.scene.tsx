@@ -31,7 +31,7 @@ export const HeroScene = () => {
           mb="40px"
           mt="20px"
         >
-          Passionate in web development.
+          Passionate in Web Development.
         </Typography>
         <Typography
           fontSize="26px"
