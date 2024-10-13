@@ -8,4 +8,11 @@ export default defineConfig({
   resolve: {
     mainFields: [],
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        silenceDeprecations: ["legacy-js-api"],
+      },
+    },
+  },
 });
