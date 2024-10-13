@@ -82,7 +82,7 @@ export const Header = () => {
                 <Button
                   disableRipple
                   sx={{
-                    "&:hover": { backgroundColor: "transparent" },
+                    "&:hover": { backgroundColor: "transparent", cursor: "not-allowed" },
                   }}
                 >
                   <Box
