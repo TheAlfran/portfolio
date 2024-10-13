@@ -52,7 +52,7 @@ export const Header = () => {
               >
                 <Box
                   component="img"
-                  src="/profile.jpeg"
+                  src="/profile.webp"
                   width="40px"
                   height="40px"
                   borderRadius="50px"
@@ -60,7 +60,7 @@ export const Header = () => {
                 <Typography textTransform="initial">Alfranciss</Typography>
                 <Box
                   component="img"
-                  src="/verified.png"
+                  src="/verified.webp"
                   width="20px"
                   height="20px"
                 />

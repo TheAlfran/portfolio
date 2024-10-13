@@ -7,7 +7,7 @@ interface SocialIconsComponentProps {
 }
 
 export const SocialIconsComponent: React.FC<SocialIconsComponentProps> = ({
-  logo = "/twitter.png",
+  logo = "/twitter.webp",
   link = "https://google.com",
 }) => {
   return (

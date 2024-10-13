@@ -50,15 +50,15 @@ export const Footer = () => {
               >
                 <SocialIconsComponent link="https://x.com/TheAlfran" />
                 <SocialIconsComponent
-                  logo="/instagram.png"
+                  logo="/instagram.webp"
                   link="https://www.instagram.com/thealfran/"
                 />
                 <SocialIconsComponent
-                  logo="/github.png"
+                  logo="/github.webp"
                   link="https://github.com/TheAlfran"
                 />
                 <SocialIconsComponent
-                  logo="/linkedin.png"
+                  logo="/linkedin.webp"
                   link="https://www.linkedin.com/in/alfranciss-dionsay-150567257/"
                 />
               </Box>

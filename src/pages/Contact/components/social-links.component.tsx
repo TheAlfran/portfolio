@@ -8,7 +8,7 @@ interface SocialLinksComponentProps {
 }
 
 export const SocialLinksComponents: React.FC<SocialLinksComponentProps> = ({
-  src = "/twitter.png",
+  src = "/twitter.webp",
   text = "Twitter / X",
   link = "https://twitter.com",
 }) => {
