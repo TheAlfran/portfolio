@@ -27,7 +27,7 @@ export const PagesButtonComponent: React.FC<PageComponentProps> = ({
           "&:hover": { background: "transparent" },
           "&:hover .line::before": {
             transform: "scaleX(1)",
-            opacity: 1,
+            opacity: 0.5,
           },
         }}
         disableRipple
