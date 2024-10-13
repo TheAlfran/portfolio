@@ -34,7 +34,7 @@ export const PagesButtonComponent: React.FC<PageComponentProps> = ({
         onClick={() => handleNavigation(page)}
       >
         <Typography
-          textTransform={"lowercase"}
+          textTransform="lowercase"
           sx={{
             position: "relative",
             "&::before": {
