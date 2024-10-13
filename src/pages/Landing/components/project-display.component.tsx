@@ -10,7 +10,7 @@ interface ProjectDisplayComponentProps {
 export const ProjectDisplayComponent: React.FC<
   ProjectDisplayComponentProps
 > = ({
-  src = "/feature-1.png",
+  src = "/feature-1.webp",
   title = "Lorem Ipsum",
   subtitle = "Lorem Ipsum Dolor",
 }) => {

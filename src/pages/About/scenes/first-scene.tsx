@@ -50,7 +50,7 @@ export const FirstScene = () => {
           )}
           <Box
             component="img"
-            src="/about-image.jpg"
+            src="/about-image.webp"
             width="342px"
             height="342px"
             ml="150px"
@@ -81,7 +81,7 @@ export const FirstScene = () => {
       >
         <PictureComponent source="place2.jpg" />
         <PictureComponent source="me2.jpg" />
-        <PictureComponent source="desktop.jpeg" />
+        <PictureComponent source="desktop.webp" />
         <PictureComponent source="me.jpg" />
         <PictureComponent source="place.jpg" />
         <PictureComponent source="mycat.jpg" />

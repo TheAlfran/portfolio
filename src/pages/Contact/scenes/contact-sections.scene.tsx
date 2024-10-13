@@ -48,7 +48,7 @@ export const ContactSectionScene = () => {
         <Stack>
           <Box
             component="img"
-            src="/contact-image.jpg"
+            src="/contact-image.webp"
             width="491px"
             height="475px"
           />
