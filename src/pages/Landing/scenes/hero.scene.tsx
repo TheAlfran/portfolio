@@ -15,7 +15,7 @@ export const HeroScene = () => {
     >
       <Box>
         <Typography
-          fontSize="16px"
+          fontSize={{ xs: "13px", sm: "15px", md: "16px" }}
           fontWeight="bold"
           textTransform="uppercase"
           color={theme.palette.text.primary}
@@ -23,25 +23,24 @@ export const HeroScene = () => {
           Hello, My Name is Alfranciss
         </Typography>
         <Typography
-          fontSize="94px"
+          fontSize={{ xs: "35px", sm: "55px", md: "70px", lg: "94px" }}
           fontWeight="bold"
           fontFamily="'Noe Display', Georgia, Times, serif"
           color={theme.palette.text.secondary}
-          lineHeight="90px"
-          mb="40px"
+          lineHeight={{ xs: "50px", sm: "75px", md: "90px" }}
+          mb={{ xs: "15px", sm: "30px", md: "40px" }}
           mt="20px"
         >
           Passionate in Web Development.
         </Typography>
         <Typography
-          fontSize="26px"
+          fontSize={{ xs: "20px", sm: "24px", lg: "26px" }}
           color={theme.palette.text.secondary}
           fontFamily="'Noe Display', Georgia, Times, serif"
         >
           I'm a junior frontend developer passionate about building
-          user-friendly websites
-          <br />
-          and sharing my knowledge on my <TextButtonComponent text="blog" /> and{" "}
+          user-friendly websites and sharing my knowledge on my{" "}
+          <TextButtonComponent text="blog" /> and{" "}
           <TextButtonComponent text="portfolio" />.
         </Typography>
       </Box>

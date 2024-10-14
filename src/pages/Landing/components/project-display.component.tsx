@@ -17,12 +17,17 @@ export const ProjectDisplayComponent: React.FC<
   const theme = useTheme();
 
   return (
-    <Stack gap="10px">
+    <Stack
+      gap="10px"
+      alignItems="center"
+      width="100%"
+      height="310px"
+    >
       <Tooltip title="In Progress" disableInteractive placement="top">
         <Box
           position="relative"
-          width="250px"
-          height="310px"
+          width="100%"
+          height="100%"
           borderRadius="10px"
           overflow="hidden"
           sx={{
@@ -49,7 +54,11 @@ export const ProjectDisplayComponent: React.FC<
             alt={title}
             width="100%"
             height="100%"
-            sx={{ objectFit: "cover", borderRadius: "10px" }}
+            sx={{
+              objectFit: "cover",
+              borderRadius: "10px",
+            }}
+           
           />
           <Box
             className="hover-text"
@@ -66,7 +75,7 @@ export const ProjectDisplayComponent: React.FC<
           >
             <Typography
               fontWeight="bold"
-              fontSize="20px"
+              fontSize={{ xs: "16px", sm: "20px" }}
               color="#fff"
               sx={{
                 position: "absolute",
@@ -79,7 +88,7 @@ export const ProjectDisplayComponent: React.FC<
               {title}
             </Typography>
             <Typography
-              fontSize="20px"
+              fontSize={{ xs: "14px", sm: "18px" }}
               color={theme.palette.text.primary}
               sx={{
                 position: "absolute",
