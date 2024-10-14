@@ -25,7 +25,7 @@ export const TextButtonComponent: React.FC<TextButtonComponentProps> = ({
         "&::after": {
           content: '""',
           position: "absolute",
-          bottom: 10,
+          bottom: { xs: 6, sm: 8, md: 10 },
           left: 0,
           width: "100%",
           height: "10px",
@@ -36,7 +36,7 @@ export const TextButtonComponent: React.FC<TextButtonComponentProps> = ({
         "&::before": {
           content: '""',
           position: "absolute",
-          bottom: 10,
+          bottom: { xs: 6, sm: 8, md: 10 },
           left: 0,
           width: "0%",
           height: "10px",
@@ -56,7 +56,7 @@ export const TextButtonComponent: React.FC<TextButtonComponentProps> = ({
       onClick={() => handleNavigation(text)}
     >
       <Typography
-        fontSize="26px"
+        fontSize={{ xs: "20px", sm: "24px", lg: "26px" }}
         color={theme.palette.text.secondary}
         fontFamily="'Noe Display', Georgia, Times, serif"
         sx={{ position: "relative", zIndex: 1, paddingBottom: "5px" }}
