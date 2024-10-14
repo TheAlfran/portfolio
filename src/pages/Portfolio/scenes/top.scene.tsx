@@ -1,10 +1,11 @@
-import { Box, Grid, Stack, Typography, useTheme } from "@mui/material";
+import { Box, Stack, Typography, useTheme } from "@mui/material";
+import Grid from '@mui/material/Grid2';
 
 export const TopScene = () => {
   const theme = useTheme();
   return (
-    <Grid item md={12} mb="50px">
-      <Stack display="flex" direction="row" justifyContent={"space-between"} >
+    <Grid size={12} mb="50px">
+      <Stack display="flex" direction="row" justifyContent={"space-between"}>
         <Stack>
           <Typography
             fontSize="64px"

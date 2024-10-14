@@ -1,5 +1,7 @@
 import React from "react";
-import { Grid, Stack } from "@mui/material";
+import { Stack } from "@mui/material";
+import Grid from '@mui/material/Grid2';
+
 import { PortfolioCardComponent } from "../components";
 
 export const BottomScene = () => {
@@ -18,7 +20,7 @@ export const BottomScene = () => {
   );
 
   return (
-    <Grid item md={12}>
+    <Grid size={12}>
       {Array.from({ length: 3 }, (_, index) => (
         <React.Fragment key={index}>{renderCards()}</React.Fragment>
       ))}

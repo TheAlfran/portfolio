@@ -1,19 +1,11 @@
-import {
-  Box,
-  Button,
-  Grid,
-  Paper,
-  Stack,
-  Typography,
-  useTheme,
-} from "@mui/material";
+import { Box, Button, Paper, Stack, Typography, useTheme } from "@mui/material";
+import Grid from "@mui/material/Grid2";
 
 export const FifthScene = () => {
   const theme = useTheme();
   return (
     <Grid
-      item
-      md={12}
+      size={12}
       display="flex"
       flexDirection="row"
       justifyContent="space-between"

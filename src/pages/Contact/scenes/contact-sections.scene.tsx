@@ -1,11 +1,12 @@
-import { Grid, Typography, useTheme, Stack, Box } from "@mui/material";
+import { Typography, useTheme, Stack, Box } from "@mui/material";
+import Grid from "@mui/material/Grid2";
 
 import { SocialLinksComponents } from "../components";
 
 export const ContactSectionScene = () => {
   const theme = useTheme();
   return (
-    <Grid item md={12}>
+    <Grid size={12}>
       <Stack display="flex" direction="row" justifyContent="space-between">
         <Stack>
           <Typography

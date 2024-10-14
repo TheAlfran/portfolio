@@ -1,4 +1,5 @@
-import { Grid, Typography, Box, Stack } from "@mui/material";
+import { Typography, Box, Stack } from "@mui/material";
+import Grid from '@mui/material/Grid2';
 import { pieArcLabelClasses, PieChart } from "@mui/x-charts/PieChart";
 
 import { useChartConfig } from "../hooks";
@@ -8,13 +9,13 @@ export const SecondScene = () => {
 
   return (
     <Grid
-      item
+      size={12}
       display="flex"
       flexDirection={{ xs: "column", md: "row" }}
       justifyContent="space-between"
       alignItems="center"
       mt="150px"
-      md={12}
+     
     >
       <Stack
         display="flex"

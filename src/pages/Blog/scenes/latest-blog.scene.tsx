@@ -1,11 +1,12 @@
-import { Box, Grid, Stack, Typography, useTheme } from "@mui/material";
+import { Box, Stack, Typography, useTheme } from "@mui/material";
+import Grid from "@mui/material/Grid2";
 
 import { LatestBlogComoponent } from "../components";
 
 export const LatestBlogScene = () => {
   const theme = useTheme();
   return (
-    <Grid item xs={12} mb="50px">
+    <Grid size={12} mb="50px">
       <Stack>
         <Typography
           fontSize="42px"
