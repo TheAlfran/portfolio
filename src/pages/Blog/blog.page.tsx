@@ -1,4 +1,4 @@
-import { Grid } from "@mui/material";
+import Grid from '@mui/material/Grid2';
 
 import { LatestBlogScene, BlogsScene } from "./scenes";
 import { SeparatorComponent } from "src/components";

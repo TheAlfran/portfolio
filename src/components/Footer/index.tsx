@@ -3,11 +3,11 @@ import {
   Box,
   Button,
   Container,
-  Grid,
   Stack,
   Typography,
   useTheme,
 } from "@mui/material";
+import Grid from "@mui/material/Grid2";
 import { SocialIconsComponent } from "./components";
 
 export const Footer = () => {
@@ -15,7 +15,7 @@ export const Footer = () => {
 
   return (
     <Grid container>
-      <Grid item xs={12} md={12}>
+      <Grid size={12}>
         <Stack
           bgcolor={theme.palette.default.main}
           height={{ xs: 50, sm: 60, md: 70 }}

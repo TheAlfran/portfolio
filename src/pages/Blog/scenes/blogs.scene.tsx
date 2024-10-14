@@ -1,10 +1,11 @@
-import { Grid, Stack } from "@mui/material";
+import { Stack } from "@mui/material";
+import Grid from '@mui/material/Grid2';
 
 import { BlogsComponent } from "../components";
 
 export const BlogsScene = () => {
   return (
-    <Grid item xs={12}>
+    <Grid size={12}>
       <Stack gap="50px" mt="50px">
         <Stack
           display="flex"

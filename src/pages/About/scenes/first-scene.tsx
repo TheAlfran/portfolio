@@ -1,12 +1,7 @@
 import React, { useState } from "react";
-import {
-  Box,
-  Grid,
-  Skeleton,
-  Stack,
-  Typography,
-  useTheme,
-} from "@mui/material";
+import { Box, Skeleton, Stack, Typography, useTheme } from "@mui/material";
+import Grid from "@mui/material/Grid2";
+
 import { PictureComponent } from "../components";
 
 export const FirstScene = () => {
@@ -20,7 +15,7 @@ export const FirstScene = () => {
   return (
     <React.Fragment>
       <Grid container spacing={4}>
-        <Grid item md={6} display="flex" justifyContent="center" direction="column">
+        <Grid size={6}>
           <Typography
             textAlign="start"
             fontSize="64px"
@@ -44,7 +39,7 @@ export const FirstScene = () => {
             not coding, you can find me enjoying online games or drawing.
           </Typography>
         </Grid>
-        <Grid item md={6} display="flex" justifyContent="flex-end">
+        <Grid size={6} display="flex" justifyContent="flex-end">
           {isLoading && (
             <Skeleton variant="rectangular" width="342px" height="342px" />
           )}
@@ -61,7 +56,6 @@ export const FirstScene = () => {
           />
         </Grid>
       </Grid>
-
       <Box
         sx={{
           width: "100%",
@@ -70,7 +64,6 @@ export const FirstScene = () => {
           backgroundColor: theme.palette.background.default,
         }}
       />
-
       <Stack
         display="flex"
         flexDirection="row"

@@ -2,12 +2,12 @@ import {
   Box,
   Button,
   Container,
-  Grid,
   Hidden,
   Slide,
   Stack,
   Typography,
 } from "@mui/material";
+import Grid from '@mui/material/Grid2';
 import { useNavigate } from "@tanstack/react-router";
 
 import { MenuDropdown, PagesButtonComponent } from "./components";
@@ -21,7 +21,7 @@ export const Header = () => {
 
   return (
     <Grid container>
-      <Grid item xs={12} md={12}>
+      <Grid size={12}>
         <Slide
           direction="down"
           in={true}

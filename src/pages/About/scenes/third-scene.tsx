@@ -1,11 +1,5 @@
-import {
-  Grid,
-  Stack,
-  Typography,
-  useTheme,
-  Box,
-  Skeleton,
-} from "@mui/material";
+import { Stack, Typography, useTheme, Box, Skeleton } from "@mui/material";
+import Grid from "@mui/material/Grid2";
 import { useRef, useState } from "react";
 
 export const ThirdScene = () => {
@@ -20,8 +14,7 @@ export const ThirdScene = () => {
 
   return (
     <Grid
-      item
-      md={12}
+      size={12}
       display="flex"
       flexDirection="row"
       alignItems="center"

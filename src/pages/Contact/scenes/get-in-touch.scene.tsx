@@ -1,17 +1,17 @@
 import {
   Button,
-  Grid,
   Stack,
   TextField,
   Tooltip,
   Typography,
   useTheme,
 } from "@mui/material";
+import Grid from '@mui/material/Grid2';
 
 export const GetInTouchScene = () => {
   const theme = useTheme();
   return (
-    <Grid item md={12} mt="100px">
+    <Grid size={12} mt="100px">
       <Typography
         fontSize="24px"
         fontWeight="bold"
