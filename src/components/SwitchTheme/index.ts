@@ -1,1 +1,1 @@
-export * from "./switch-theme.component";
+export * from "./components/switch-theme.component";

@@ -1,7 +1,7 @@
 import { Stack, Typography, useTheme } from "@mui/material";
 
-import { ThemeButtonComponent } from "./components";
-import { themes } from "./data/theme.data";
+import { ThemeButtonComponent } from ".";
+import { themes } from "../data/theme.data";
 
 export const SwitchTheme = () => {
   const theme = useTheme();
