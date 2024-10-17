@@ -44,7 +44,7 @@ export const PagesButtonComponent: React.FC<PageComponentProps> = ({
               left: 0,
               width: "100%",
               height: "5px",
-              backgroundColor: theme.palette.primary.main,
+              backgroundColor: theme.palette.text.primary,
               transform: isActive ? "scaleX(1)" : "scaleX(0)",
               opacity: isActive ? 1 : 0,
               transformOrigin: "bottom left",

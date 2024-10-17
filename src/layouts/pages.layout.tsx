@@ -1,5 +1,5 @@
-import { Box, Container } from "@mui/material";
 import React from "react";
+import { Box, Container, useTheme } from "@mui/material";
 
 import { Header, Footer } from "src/components";
 
@@ -8,12 +8,14 @@ interface PageLayoutProps {
 }
 
 export default function PageLayout({ children }: PageLayoutProps) {
+  const theme = useTheme();
   return (
     <Box
       display="flex"
       flexDirection="column"
       minHeight="100vh"
       justifyContent="space-between"
+      bgcolor={theme.palette.background.default}
     >
       <Header />
       <Container
