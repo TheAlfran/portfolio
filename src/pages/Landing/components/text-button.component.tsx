@@ -41,7 +41,7 @@ export const TextButtonComponent: React.FC<TextButtonComponentProps> = ({
           width: "0%",
           height: "10px",
           backgroundColor: theme.palette.primary.main,
-          opacity: 1,
+          opacity: 0.6,
           transition: "width 0.3s ease",
           pointerEvents: "none",
         },
