@@ -41,7 +41,8 @@ export const ThemeButtonComponent: React.FC<ThemeButtonComponentProps> = ({
       sx={{
         bgcolor: $backgroundColor,
         borderRadius: "10px",
-        minWidth: "150px",
+        minWidth: "140px",
+        maxWidth: "140px",
         height: "80px",
         display: "flex",
         flexDirection: "column",
