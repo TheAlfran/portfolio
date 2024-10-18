@@ -4,7 +4,7 @@ import { FeatureScene, HeroScene } from "./scenes";
 
 export default function LandingPage() {
   return (
-    <Grid container>
+    <Grid container >
       <Grid size={12}>
         <HeroScene />
         <FeatureScene />
