@@ -1,17 +1,27 @@
 import React from "react";
-import { Menu, MenuItem, IconButton, Box } from "@mui/material";
+import {
+  IconButton,
+  Box,
+  Backdrop,
+  Slide,
+  MenuItem,
+  useTheme,
+} from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu"; // Import MenuIcon from MUI
 import { useNavigate } from "@tanstack/react-router";
 
 export const MenuDropdown: React.FC = () => {
-  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const [open, setOpen] = React.useState(false);
   const navigate = useNavigate();
 
-  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorEl(event.currentTarget);
+  const handleToggle = () => {
+    setOpen(!open);
   };
 
+  const theme = useTheme();
+
   const handleClose = () => {
-    setAnchorEl(null);
+    setOpen(false);
   };
 
   const handleNavigate = (path: string) => {
@@ -19,92 +29,64 @@ export const MenuDropdown: React.FC = () => {
     handleClose();
   };
 
+  const menuItems = [
+    { label: "About", path: "about" },
+    { label: "Portfolio", path: "portfolio" },
+    { label: "Blog", path: "blog" },
+    { label: "Contact", path: "contact" },
+  ];
+
   return (
     <React.Fragment>
-      <IconButton onClick={handleClick}>
-        <Box
-          component="img"
-          src="/menu.svg"
-          width="30px"
-          height="30px"
-          sx={{
-            cursor: "pointer",
-            borderRadius: "50%",
-          }}
-        />
+      <IconButton onClick={handleToggle} aria-label="Open menu">
+        <MenuIcon sx={{ fontSize: 30, cursor: "pointer" , color: theme.palette.primary.main}} />
       </IconButton>
-      <Menu
-        anchorEl={anchorEl}
-        open={Boolean(anchorEl)}
-        onClose={handleClose}
-        PaperProps={{
-          elevation: 3,
-          sx: {
-            backgroundColor: "white",
-            borderRadius: "8px",
-            padding: "5px",
-            minWidth: "150px",
-            border: "1px solid lightgrey",
-          },
-        }}
-        anchorOrigin={{
-          vertical: "bottom",
-          horizontal: "center",
-        }}
-        transformOrigin={{
-          vertical: "top",
-          horizontal: "center",
-        }}
+      <Backdrop
+        open={open}
+        onClick={handleClose}
+        sx={{ zIndex: 1200, backgroundColor: "rgba(0, 0, 0, 0.5)" }}
+      />
+      <Slide
+        direction="down"
+        in={open}
+        mountOnEnter
+        unmountOnExit
+        timeout={400}
       >
-        <MenuItem
-          onClick={() => handleNavigate("about")}
+        <Box
           sx={{
-            fontFamily: "Arial, sans-serif",
-            padding: "10px 20px",
-            "&:hover": {
-              backgroundColor: "lightblue",
-            },
+            position: "fixed",
+            left: 0,
+            top: 0,
+            width: "100vw",
+            height: "auto",
+            backgroundColor: theme.palette.default.main,
+            zIndex: 1300,
+            display: "flex",
+            flexDirection: "column",
           }}
         >
-          About
-        </MenuItem>
-        <MenuItem
-          onClick={() => handleNavigate("portfolio")}
-          sx={{
-            fontFamily: "Arial, sans-serif",
-            padding: "10px 20px",
-            "&:hover": {
-              backgroundColor: "lightblue",
-            },
-          }}
-        >
-          Portfolio
-        </MenuItem>
-        <MenuItem
-          onClick={() => handleNavigate("blog")}
-          sx={{
-            fontFamily: "Arial, sans-serif",
-            padding: "10px 20px",
-            "&:hover": {
-              backgroundColor: "lightblue",
-            },
-          }}
-        >
-          Blog
-        </MenuItem>
-        <MenuItem
-          onClick={() => handleNavigate("contact")}
-          sx={{
-            fontFamily: "Arial, sans-serif",
-            padding: "10px 20px",
-            "&:hover": {
-              backgroundColor: "lightblue",
-            },
-          }}
-        >
-          Contact
-        </MenuItem>
-      </Menu>
+          {menuItems.map(({ label, path }) => (
+            <MenuItem
+              key={path}
+              onClick={() => handleNavigate(path)}
+              sx={{
+                fontFamily: "Arial, sans-serif",
+                color: theme.palette.text.secondary,
+                padding: "20px",
+                fontSize: "20px",
+                width: "100%",
+                display: "flex",
+                "&:hover": {
+                  backgroundColor: "lightblue",
+                },
+              }}
+            >
+              {label}
+            </MenuItem>
+          ))}
+        </Box>
+      </Slide>
     </React.Fragment>
   );
 };
