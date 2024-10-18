@@ -7,7 +7,7 @@ import {
   MenuItem,
   useTheme,
 } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu"; // Import MenuIcon from MUI
+import MenuIcon from "@mui/icons-material/Menu"; 
 import { useNavigate } from "@tanstack/react-router";
 
 export const MenuDropdown: React.FC = () => {
