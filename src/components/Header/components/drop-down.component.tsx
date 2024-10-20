@@ -7,7 +7,6 @@ import {
   MenuItem,
   Typography,
   Button,
-  useTheme,
 } from "@mui/material";
 import { Close, Menu } from "@mui/icons-material";
 
@@ -23,8 +22,6 @@ export const MenuDropdown: React.FC = () => {
     menuItemStyle,
     linkStyle,
   } = useMenuDropdown();
-
-  const theme = useTheme();
 
   return (
     <React.Fragment>
@@ -97,9 +94,7 @@ export const MenuDropdown: React.FC = () => {
                 justifyContent: "center",
               }}
             >
-              <Close
-                sx={{ fontSize: "14px", color: theme.palette.text.secondary }}
-              />
+              <Close sx={{ fontSize: "14px", color: "text.secondary" }} />
             </Button>
           </Box>
           {menuItems.map(({ icon, label, path }) => (
@@ -117,7 +112,7 @@ export const MenuDropdown: React.FC = () => {
             <Typography fontSize="14px" color="text.secondary">
               © Alfranciss 2024
             </Typography>
-            <Box display="flex" gap="10px" mt="20px">
+            <Box display="flex" gap="10px" mt="20px" flexWrap="wrap">
               {socialLinks.map(({ label, href }) => (
                 <Box component="a" href={href} sx={linkStyle} key={label}>
                   {label}
