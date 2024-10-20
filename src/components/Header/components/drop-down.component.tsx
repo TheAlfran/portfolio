@@ -5,41 +5,29 @@ import {
   Backdrop,
   Slide,
   MenuItem,
-  useTheme,
+  Typography,
 } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu"; 
-import { useNavigate } from "@tanstack/react-router";
+import MenuIcon from "@mui/icons-material/Menu";
+
+import { useMenuDropdown } from "../hooks";
+import { menuItems, socialLinks } from "../data";
 
 export const MenuDropdown: React.FC = () => {
-  const [open, setOpen] = React.useState(false);
-  const navigate = useNavigate();
-
-  const handleToggle = () => {
-    setOpen(!open);
-  };
-
-  const theme = useTheme();
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-
-  const handleNavigate = (path: string) => {
-    navigate({ to: `/${path}` });
-    handleClose();
-  };
-
-  const menuItems = [
-    { label: "About", path: "about" },
-    { label: "Portfolio", path: "portfolio" },
-    { label: "Blog", path: "blog" },
-    { label: "Contact", path: "contact" },
-  ];
+  const {
+    open,
+    handleToggle,
+    handleClose,
+    handleNavigate,
+    menuItemStyle,
+    linkStyle,
+  } = useMenuDropdown();
 
   return (
-    <React.Fragment>
+    <>
       <IconButton onClick={handleToggle} aria-label="Open menu">
-        <MenuIcon sx={{ fontSize: 30, cursor: "pointer" , color: theme.palette.primary.main}} />
+        <MenuIcon
+          sx={{ fontSize: 30, cursor: "pointer", color: "primary.main" }}
+        />
       </IconButton>
       <Backdrop
         open={open}
@@ -47,7 +35,7 @@ export const MenuDropdown: React.FC = () => {
         sx={{ zIndex: 1200, backgroundColor: "rgba(0, 0, 0, 0.5)" }}
       />
       <Slide
-        direction="down"
+        direction="right"
         in={open}
         mountOnEnter
         unmountOnExit
@@ -58,35 +46,66 @@ export const MenuDropdown: React.FC = () => {
             position: "fixed",
             left: 0,
             top: 0,
-            width: "100vw",
-            height: "auto",
-            backgroundColor: theme.palette.default.main,
+            width: "65%",
+            height: "100%",
+            backgroundColor: "default.main",
             zIndex: 1300,
             display: "flex",
             flexDirection: "column",
+            padding: "20px",
+            gap: "5px",
+            borderTopRightRadius: "10px",
+            borderBottomRightRadius: "10px",
           }}
         >
-          {menuItems.map(({ label, path }) => (
+          <Box
+            sx={{
+              gap: "10px",
+              display: "flex",
+              mb: "30px",
+              alignItems: "center",
+            }}
+          >
+            <Box
+              component="img"
+              src="/profile.webp"
+              width="40px"
+              height="40px"
+              borderRadius="50px"
+            />
+            <Typography textTransform="initial">Alfranciss</Typography>
+            <Box
+              component="img"
+              src="/verified.webp"
+              width="20px"
+              height="20px"
+            />
+          </Box>
+          {menuItems.map(({ icon, label, path }) => (
             <MenuItem
               key={path}
               onClick={() => handleNavigate(path)}
-              sx={{
-                fontFamily: "Arial, sans-serif",
-                color: theme.palette.text.secondary,
-                padding: "20px",
-                fontSize: "20px",
-                width: "100%",
-                display: "flex",
-                "&:hover": {
-                  backgroundColor: "lightblue",
-                },
-              }}
+              sx={menuItemStyle}
             >
-              {label}
+              {icon}
+              <Typography sx={{ ml: 1 }}>{label}</Typography>
             </MenuItem>
           ))}
+          <Box width="100%" height="1px" bgcolor="text.secondary" mt="20px" />
+          <Box mt="20px">
+            <Typography fontSize="14px" color="text.secondary">
+              © Alfranciss 2024
+            </Typography>
+            <Box display="flex" gap="10px" mt="20px">
+              {socialLinks.map(({ label, href }) => (
+                <Box component="a" href={href} sx={linkStyle} key={label}>
+                  {label}
+                </Box>
+              ))}
+            </Box>
+          </Box>
         </Box>
       </Slide>
-    </React.Fragment>
+    </>
   );
 };
