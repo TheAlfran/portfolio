@@ -6,8 +6,10 @@ import {
   Slide,
   MenuItem,
   Typography,
+  Button,
+  useTheme,
 } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
+import { Close, Menu } from "@mui/icons-material";
 
 import { useMenuDropdown } from "../hooks";
 import { menuItems, socialLinks } from "../data";
@@ -22,12 +24,12 @@ export const MenuDropdown: React.FC = () => {
     linkStyle,
   } = useMenuDropdown();
 
+  const theme = useTheme();
+
   return (
-    <>
+    <React.Fragment>
       <IconButton onClick={handleToggle} aria-label="Open menu">
-        <MenuIcon
-          sx={{ fontSize: 30, cursor: "pointer", color: "primary.main" }}
-        />
+        <Menu sx={{ fontSize: 30, cursor: "pointer", color: "primary.main" }} />
       </IconButton>
       <Backdrop
         open={open}
@@ -58,28 +60,47 @@ export const MenuDropdown: React.FC = () => {
             borderBottomRightRadius: "10px",
           }}
         >
-          <Box
-            sx={{
-              gap: "10px",
-              display: "flex",
-              mb: "30px",
-              alignItems: "center",
-            }}
-          >
+          <Box display="flex" justifyContent="space-between">
             <Box
-              component="img"
-              src="/profile.webp"
-              width="40px"
-              height="40px"
-              borderRadius="50px"
-            />
-            <Typography textTransform="initial">Alfranciss</Typography>
-            <Box
-              component="img"
-              src="/verified.webp"
-              width="20px"
-              height="20px"
-            />
+              sx={{
+                gap: "10px",
+                display: "flex",
+                mb: "30px",
+                alignItems: "center",
+              }}
+            >
+              <Box
+                component="img"
+                src="/profile.webp"
+                width="40px"
+                height="40px"
+                borderRadius="50px"
+              />
+              <Typography textTransform="initial">Alfranciss</Typography>
+              <Box
+                component="img"
+                src="/verified.webp"
+                width="20px"
+                height="20px"
+              />
+            </Box>
+            <Button
+              onClick={handleClose}
+              sx={{
+                height: "40px",
+                width: "40px",
+                minWidth: 0,
+                padding: 0,
+                borderRadius: "50%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <Close
+                sx={{ fontSize: "14px", color: theme.palette.text.secondary }}
+              />
+            </Button>
           </Box>
           {menuItems.map(({ icon, label, path }) => (
             <MenuItem
@@ -106,6 +127,6 @@ export const MenuDropdown: React.FC = () => {
           </Box>
         </Box>
       </Slide>
-    </>
+    </React.Fragment>
   );
 };
